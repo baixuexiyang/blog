@@ -1,0 +1,41 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "private": true,
+  "description": "blog",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "~4.0.0-rc4",
+    "static-favicon": "~1.0.2",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.1",
+    "ejs": "~0.8.8",
+    "debug": "~0.7.4",
+    "compression": "~1.0.1",
+    "less-middleware": "0.1.15",
+    "iconv-lite": "~0.2.11",
+    "socket.io": "~0.9.16",
+    "connect-redis": "^2.0.0",
+    "redis": "^0.10.1",
+    "express-session": "^1.0.3",
+    "moment": "^2.6.0",
+    "mongodb": "~2.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baixuexiyang/blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "xiyangbaixue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baixuexiyang/blog/issues"
+  },
+  "homepage": "https://github.com/baixuexiyang/blog"
+}
