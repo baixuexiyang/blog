@@ -1,5 +1,5 @@
 var fs = require('fs'), path = require('path'), iconv = require('iconv-lite'), shownTypes = ['html', 'shtml'];
-require('../business/main');
+
 /**
  * 获取部分文件名
  * @param {Array} cats 目录数据
