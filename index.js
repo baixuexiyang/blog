@@ -16,9 +16,12 @@ var express = require('express'),
     debug = require('debug'),
     ejs = require('ejs'),
     config = require('./config/core'),
-    routes = require('./routes'),
+    routes = require('./routes/routes'),
+    main = require('./routes/main'),
     socketio = require('socket.io'),
     http = require('http'),
+    // 读取文件模块
+    fs = require('fs'),
     app = express(),
     server,
     io,
@@ -81,6 +84,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 //     var liveReload = require('./helper/livereload');
 //     app.use(liveReload());
 // }
+main(app);
 routes(app);
 
 if (cluster.isMaster) {

@@ -1,4 +1,4 @@
-var main = require('./controllers/index'), mockup = require('./controllers/mockup'), util = require('./helper/util'), moment = require('moment');
+var main = require('../controllers/index'), mockup = require('../controllers/mockup'), util = require('../helper/util'), moment = require('moment');
 
 /**
  * 路由，含错误路由
@@ -17,9 +17,12 @@ module.exports = function (app) {
     // next();
     // });
     // app.get('/', main.listFiles);
-    app.get('/', function(req, res) {
-        res.render('main/index.html');
-    });
+    // app.get('/', function(req, res) {
+    //     res.render('main/index.html');
+    // });
+    // app.get('/admin', function(req, res) {
+    //     res.render('main/login.html');
+    // });
     //匹配mockup[/json]/xxx.json
     app.post(/\/mockup\/(json\/)?([\w\-]+\.json)/i, mockup.sendJson);
     app.get(/\/mockup\/(json\/)?([\w\-]+\.json)/i, mockup.sendJson);
