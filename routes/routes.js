@@ -1,5 +1,4 @@
 var main = require('../controllers/index'), mockup = require('../controllers/mockup'), util = require('../helper/util'), moment = require('moment');
-
 /**
  * 路由，含错误路由
  * @param {Object} app Server对象
@@ -24,6 +23,14 @@ module.exports = function (app) {
     //     res.render('main/login.html');
     // });
     //匹配mockup[/json]/xxx.json
+    app.get(/jqueryHandler.html/, function(req,res,next) {
+        res.render('jquery.html');
+        res.end();
+    });
+    app.get(/javascriptHandler.html/, function(req,res,next) {
+        res.render('javascript.html');
+        res.end();
+    });
     app.post(/\/mockup\/(json\/)?([\w\-]+\.json)/i, mockup.sendJson);
     app.get(/\/mockup\/(json\/)?([\w\-]+\.json)/i, mockup.sendJson);
     //匹配mockup/?q=xxx
