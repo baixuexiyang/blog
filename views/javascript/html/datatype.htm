@@ -1,8 +1,8 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+锘�!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="Content-Type" Content="text/html; charset=gb2312">
-<TITLE>JScript 的数据类型</TITLE>
+<TITLE>JScript 鐨勬暟鎹被鍨�/TITLE>
 <!--CSS_START-->
 <style>@import url(../html-vss/msdnie4a.css);</style>
 <link disabled rel="stylesheet" href="../html-vss/msdn_ie3.css">
@@ -15,35 +15,35 @@
 <TABLE class="banner" width="100%" CELLSPACING=0>
 <TR>
 <TD class="bannerleft" nowrap>JScript&nbsp;</TD>
-<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">语言参考</a></TD>
+<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">璇█鍙傝�</a></TD>
 </TR>
 </TABLE>
 <HR>
 <!--End Head-->
 
-<H1><A NAME="datatype"></A>JScript 的数据类型</H1>
+<H1><A NAME="datatype"></A>JScript 鐨勬暟鎹被鍨�/H1>
 
-<P>Jscript 有三种主要数据类型、两种复合数据类型和两种特殊数据类型。</P>
+<P>Jscript 鏈変笁绉嶄富瑕佹暟鎹被鍨嬨�涓ょ澶嶅悎鏁版嵁绫诲瀷鍜屼袱绉嶇壒娈婃暟鎹被鍨嬨�</P>
 
-<P>主要（基本）数据类型是：
-
-<UL type=disc>
-	<LI>字符串</li>
-
-	<LI>数值</li>
-
-	<LI>布尔</li>
-</UL>
-
-<P>复合（引用）数据类型是：
+<P>涓昏锛堝熀鏈級鏁版嵁绫诲瀷鏄細
 
 <UL type=disc>
-	<LI>对象</li>
+	<LI>瀛楃涓�/li>
 
-	<LI>数组</li>
+	<LI>鏁板�</li>
+
+	<LI>甯冨皵</li>
 </UL>
 
-<P>特殊数据类型是：
+<P>澶嶅悎锛堝紩鐢級鏁版嵁绫诲瀷鏄細
+
+<UL type=disc>
+	<LI>瀵硅薄</li>
+
+	<LI>鏁扮粍</li>
+</UL>
+
+<P>鐗规畩鏁版嵁绫诲瀷鏄細
 
 <UL type=disc>
 	<LI>Null</li>
@@ -51,203 +51,203 @@
 	<LI>Undefined</li>
 </UL>
 
-<H2>字符串数据类型</H2>
+<H2>瀛楃涓叉暟鎹被鍨�/H2>
 
-<P>一个字符串值是排在一起的一串零或零以上的 Unicode 字符（字母、数字和标点符号）。字符串数据类型用来表示 JScript 中的文本。脚本中可以包含字符串文字，这些字符串文字放在一对匹配的的单引号或双引号中。字符串中可以包含双引号，该双引号两边需加单引号，也可以包含单引号，该单引号两边需加双引号。下面是字符串的示例：</P>
+<P>涓�釜瀛楃涓插�鏄帓鍦ㄤ竴璧风殑涓�覆闆舵垨闆朵互涓婄殑 Unicode 瀛楃锛堝瓧姣嶃�鏁板瓧鍜屾爣鐐圭鍙凤級銆傚瓧绗︿覆鏁版嵁绫诲瀷鐢ㄦ潵琛ㄧず JScript 涓殑鏂囨湰銆傝剼鏈腑鍙互鍖呭惈瀛楃涓叉枃瀛楋紝杩欎簺瀛楃涓叉枃瀛楁斁鍦ㄤ竴瀵瑰尮閰嶇殑鐨勫崟寮曞彿鎴栧弻寮曞彿涓�瀛楃涓蹭腑鍙互鍖呭惈鍙屽紩鍙凤紝璇ュ弻寮曞彿涓よ竟闇�姞鍗曞紩鍙凤紝涔熷彲浠ュ寘鍚崟寮曞彿锛岃鍗曞紩鍙蜂袱杈归渶鍔犲弻寮曞彿銆備笅闈㈡槸瀛楃涓茬殑绀轰緥锛�/P>
 
-<PRE><CODE>"Happy am I; from care I’m free!"
+<PRE><CODE>"Happy am I; from care I鈥檓 free!"
 '"Avast, ye lubbers!" roared the technician.' 
 "42"
 'c'</CODE></PRE>
 
-<P>请注意，JScript 中没有表示单个字符的类型（如 C++ 的 <B>char</B>）。要表示 Jscript 中的单个字符，应创建一个只包含一个字符的字符串。包含零个字符（""）的字符串是空（零长度）字符串。</P>
+<P>璇锋敞鎰忥紝JScript 涓病鏈夎〃绀哄崟涓瓧绗︾殑绫诲瀷锛堝 C++ 鐨�<B>char</B>锛夈�瑕佽〃绀�Jscript 涓殑鍗曚釜瀛楃锛屽簲鍒涘缓涓�釜鍙寘鍚竴涓瓧绗︾殑瀛楃涓层�鍖呭惈闆朵釜瀛楃锛�"锛夌殑瀛楃涓叉槸绌猴紙闆堕暱搴︼級瀛楃涓层�</P>
 
-<H2>数值数据类型</H2>
+<H2>鏁板�鏁版嵁绫诲瀷</H2>
 
-<P>在 Jscript 中整数和浮点值没有差别；JScript 数值可以是其中任意一种（JScript 内部将所有的数值表示为浮点值）。</P>
+<P>鍦�Jscript 涓暣鏁板拰娴偣鍊兼病鏈夊樊鍒紱JScript 鏁板�鍙互鏄叾涓换鎰忎竴绉嶏紙JScript 鍐呴儴灏嗘墍鏈夌殑鏁板�琛ㄧず涓烘诞鐐瑰�锛夈�</P>
 
-<H3>整型值</H3>
+<H3>鏁村瀷鍊�/H3>
 
-<P>整型值可以是正整数，负整数和 0。可以用 10 进制，8 进制和 16 进制来表示。在 Jscript 中大多数字是用十进制表示的。加前缀“0”表示 8 进制的整型值，只能包含 0 到 7 的数字。前缀为“0”同时包含数字“8”或“9”的数被解释为十进制数。 </P>
+<P>鏁村瀷鍊煎彲浠ユ槸姝ｆ暣鏁帮紝璐熸暣鏁板拰 0銆傚彲浠ョ敤 10 杩涘埗锛� 杩涘埗鍜�16 杩涘埗鏉ヨ〃绀恒�鍦�Jscript 涓ぇ澶氭暟瀛楁槸鐢ㄥ崄杩涘埗琛ㄧず鐨勩�鍔犲墠缂��0鈥濊〃绀�8 杩涘埗鐨勬暣鍨嬪�锛屽彧鑳藉寘鍚�0 鍒�7 鐨勬暟瀛椼�鍓嶇紑涓衡�0鈥濆悓鏃跺寘鍚暟瀛椻�8鈥濇垨鈥�鈥濈殑鏁拌瑙ｉ噴涓哄崄杩涘埗鏁般� </P>
 
-<P>加前缀“0x”（零和x|X）表示 16 进制整型值。可以包含数字 0 到 9，以及字母 A 到 F（大写或小写）。使用字母 A 到 F 表示十进制 10 到 15 的单个数字。就是说 0xF 与 15 相等，同时 0x10 等于 16。</P>
+<P>鍔犲墠缂��0x鈥濓紙闆跺拰x|X锛夎〃绀�16 杩涘埗鏁村瀷鍊笺�鍙互鍖呭惈鏁板瓧 0 鍒�9锛屼互鍙婂瓧姣�A 鍒�F锛堝ぇ鍐欐垨灏忓啓锛夈�浣跨敤瀛楁瘝 A 鍒�F 琛ㄧず鍗佽繘鍒�10 鍒�15 鐨勫崟涓暟瀛椼�灏辨槸璇�0xF 涓�15 鐩哥瓑锛屽悓鏃�0x10 绛変簬 16銆�/P>
 
-<P>八进制和十六进制数可以为负，但不能有小数位，同时不能以科学计数法（指数）表示。</P>
+<P>鍏繘鍒跺拰鍗佸叚杩涘埗鏁板彲浠ヤ负璐燂紝浣嗕笉鑳芥湁灏忔暟浣嶏紝鍚屾椂涓嶈兘浠ョ瀛﹁鏁版硶锛堟寚鏁帮級琛ㄧず銆�/P>
 
-<H3>浮点值</H3>
+<H3>娴偣鍊�/H3>
 
-<P>浮点值为带小数部分的数。也可以用科学计数法来表示。这就是说，大写或小写“e”用来表示 10 的次方。Jscript用数值表示的八字节 IEEE754 浮点标准。这意味着数字最大可以到±1.7976931348623157x10<SUP>308</SUP>，最小到±5x10<SUP>-324</SUP>。以“0”开始且包含小数点的数字被解释为小数浮点数。</P>
+<P>娴偣鍊间负甯﹀皬鏁伴儴鍒嗙殑鏁般�涔熷彲浠ョ敤绉戝璁℃暟娉曟潵琛ㄧず銆傝繖灏辨槸璇达紝澶у啓鎴栧皬鍐欌�e鈥濈敤鏉ヨ〃绀�10 鐨勬鏂广�Jscript鐢ㄦ暟鍊艰〃绀虹殑鍏瓧鑺�IEEE754 娴偣鏍囧噯銆傝繖鎰忓懗鐫�暟瀛楁渶澶у彲浠ュ埌卤1.7976931348623157x10<SUP>308</SUP>锛屾渶灏忓埌卤5x10<SUP>-324</SUP>銆備互鈥�鈥濆紑濮嬩笖鍖呭惈灏忔暟鐐圭殑鏁板瓧琚В閲婁负灏忔暟娴偣鏁般�</P>
 
-<P>注意以“0x”或“00”开始并包含小数点的数将发生错误。以下是 Jscript 中数字的例子。</P>
+<P>娉ㄦ剰浠モ�0x鈥濇垨鈥�0鈥濆紑濮嬪苟鍖呭惈灏忔暟鐐圭殑鏁板皢鍙戠敓閿欒銆備互涓嬫槸 Jscript 涓暟瀛楃殑渚嬪瓙銆�/P>
 
 <TABLE border=1 cellspacing=0 cols=3 frame=box rules=all>
 
 <TR VALIGN="top">
-<TH width=29%>数字</TH>
-<TH width=48%>描述</TH>
-<TH width=23%>等价十进制数</TH>
+<TH width=29%>鏁板瓧</TH>
+<TH width=48%>鎻忚堪</TH>
+<TH width=23%>绛変环鍗佽繘鍒舵暟</TH>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>.0001, 0.0001, 1e-4, 1.0e-4</TD>
-<TD width=48%>四个相等的浮点数。</TD>
+<TD width=48%>鍥涗釜鐩哥瓑鐨勬诞鐐规暟銆�/TD>
 <TD width=23%>0.0001</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>3.45e2</TD>
-<TD width=48%>浮点数。</TD>
+<TD width=48%>娴偣鏁般�</TD>
 <TD width=23%>345</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>42</TD>
-<TD width=48%>整数。</TD>
+<TD width=48%>鏁存暟銆�/TD>
 <TD width=23%>42</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>0378</TD>
-<TD width=48%>整数。虽然看起来是八进制数（以0开头），但是8不是有效的八进制数字，所以为十进制数。</TD>
+<TD width=48%>鏁存暟銆傝櫧鐒剁湅璧锋潵鏄叓杩涘埗鏁帮紙浠�寮�ご锛夛紝浣嗘槸8涓嶆槸鏈夋晥鐨勫叓杩涘埗鏁板瓧锛屾墍浠ヤ负鍗佽繘鍒舵暟銆�/TD>
 <TD width=23%>378</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>0377</TD>
-<TD width=48%>八进制整数。注意它虽然看起来比上面的数只小1，但实际数值有很大不同。</TD>
+<TD width=48%>鍏繘鍒舵暣鏁般�娉ㄦ剰瀹冭櫧鐒剁湅璧锋潵姣斾笂闈㈢殑鏁板彧灏�锛屼絾瀹為檯鏁板�鏈夊緢澶т笉鍚屻�</TD>
 <TD width=23%>255</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>0.0001</TD>
-<TD width=48%>浮点数。虽然以零开头，但由于带有小数点所以不是八进制数。</TD>
+<TD width=48%>娴偣鏁般�铏界劧浠ラ浂寮�ご锛屼絾鐢变簬甯︽湁灏忔暟鐐规墍浠ヤ笉鏄叓杩涘埗鏁般�</TD>
 <TD width=23%>0.0001</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>00.0001</TD>
-<TD width=48%>错误。两个零开头表示为八进制，但八进制数不能带有小数部分。</TD>
-<TD width=23%>N/A （编译错误）</TD>
+<TD width=48%>閿欒銆備袱涓浂寮�ご琛ㄧず涓哄叓杩涘埗锛屼絾鍏繘鍒舵暟涓嶈兘甯︽湁灏忔暟閮ㄥ垎銆�/TD>
+<TD width=23%>N/A 锛堢紪璇戦敊璇級</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>0Xff</TD>
-<TD width=48%>十六进制整数。</TD>
+<TD width=48%>鍗佸叚杩涘埗鏁存暟銆�/TD>
 <TD width=23%>255</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>0x37CF</TD>
-<TD width=48%>十六进制整数。</TD>
+<TD width=48%>鍗佸叚杩涘埗鏁存暟銆�/TD>
 <TD width=23%>14287</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>0x3e7</TD>
-<TD width=48%>十六进制整数。注意‘e’并不被认为指数。</TD>
+<TD width=48%>鍗佸叚杩涘埗鏁存暟銆傛敞鎰忊�e鈥欏苟涓嶈璁や负鎸囨暟銆�/TD>
 <TD width=23%>999</TD>
 </TR>
 
 <TR VALIGN="top">
 <TD width=29%>0x3.45e2</TD>
-<TD width=48%>错误。十六进制数不能有小数部分。</TD>
-<TD width=23%>N/A （编译错误）</TD>
+<TD width=48%>閿欒銆傚崄鍏繘鍒舵暟涓嶈兘鏈夊皬鏁伴儴鍒嗐�</TD>
+<TD width=23%>N/A 锛堢紪璇戦敊璇級</TD>
 </TR>
 </TABLE><BR>
 
-<P>另外，JScript包含特殊值数字。它们是：
+<P>鍙﹀锛孞Script鍖呭惈鐗规畩鍊兼暟瀛椼�瀹冧滑鏄細
 
 <UL type=disc>
-	<LI>NaN （不是数）。当对不适当的数据进行数学运算时使用，例如字符串或未定义值。</li>
+	<LI>NaN 锛堜笉鏄暟锛夈�褰撳涓嶉�褰撶殑鏁版嵁杩涜鏁板杩愮畻鏃朵娇鐢紝渚嬪瀛楃涓叉垨鏈畾涔夊�銆�/li>
 
-	<LI>正无穷大。在JScript中如果一个正数太大的话使用它来表示。</li>
+	<LI>姝ｆ棤绌峰ぇ銆傚湪JScript涓鏋滀竴涓鏁板お澶х殑璇濅娇鐢ㄥ畠鏉ヨ〃绀恒�</li>
 
-	<LI>负无穷大。在JScript中如果一个负数太大的话使用它来表示。</li>
+	<LI>璐熸棤绌峰ぇ銆傚湪JScript涓鏋滀竴涓礋鏁板お澶х殑璇濅娇鐢ㄥ畠鏉ヨ〃绀恒�</li>
 
-	<LI>正0和负0。Jscript区分正0和负0。</li>
+	<LI>姝�鍜岃礋0銆侸script鍖哄垎姝�鍜岃礋0銆�/li>
 </UL>
 
-<H2>Boolean数据类型</H2>
+<H2>Boolean鏁版嵁绫诲瀷</H2>
 
-<P>尽管字符串和数字类型可以有无数不同的值，boolean 数据类型却只有两个值。它们是文字 <B>true </B>和 <B>false</B>。Boolean值是一个真值，它表示一个状态的有效性（说明该状态为真或假）。</P>
+<P>灏界瀛楃涓插拰鏁板瓧绫诲瀷鍙互鏈夋棤鏁颁笉鍚岀殑鍊硷紝boolean 鏁版嵁绫诲瀷鍗村彧鏈変袱涓�銆傚畠浠槸鏂囧瓧 <B>true </B>鍜�<B>false</B>銆侭oolean鍊兼槸涓�釜鐪熷�锛屽畠琛ㄧず涓�釜鐘舵�鐨勬湁鏁堟�锛堣鏄庤鐘舵�涓虹湡鎴栧亣锛夈�</P>
 
-<P>脚本中的比较通常得到一个 Boolean 结果。考虑下一行 Jscript 代码。</P>
+<P>鑴氭湰涓殑姣旇緝閫氬父寰楀埌涓�釜 Boolean 缁撴灉銆傝�铏戜笅涓� Jscript 浠ｇ爜銆�/P>
 
 <PRE><CODE>y = (x == 2000);</CODE></PRE>
 
-<P>这里要比较变量 x 的值是否与数字 2000 相等。如果相等，比较的结果为 Boolean 值 <B>true</B>，并将其赋给变量 y。如果x与2000不等，则比较的结果为boolean值<B>false</B>。</P>
+<P>杩欓噷瑕佹瘮杈冨彉閲�x 鐨勫�鏄惁涓庢暟瀛�2000 鐩哥瓑銆傚鏋滅浉绛夛紝姣旇緝鐨勭粨鏋滀负 Boolean 鍊�<B>true</B>锛屽苟灏嗗叾璧嬬粰鍙橀噺 y銆傚鏋渪涓�000涓嶇瓑锛屽垯姣旇緝鐨勭粨鏋滀负boolean鍊�B>false</B>銆�/P>
 
-<P>Boolean值在结构控制中尤其有用。可以将直接创建 boolean 值的比较与用使用该 boolean 值的语句相组合。考虑下面的JScript代码范例。</P>
+<P>Boolean鍊煎湪缁撴瀯鎺у埗涓挨鍏舵湁鐢ㄣ�鍙互灏嗙洿鎺ュ垱寤�boolean 鍊肩殑姣旇緝涓庣敤浣跨敤璇�boolean 鍊肩殑璇彞鐩哥粍鍚堛�鑰冭檻涓嬮潰鐨凧Script浠ｇ爜鑼冧緥銆�/P>
 
 <PRE><CODE>if (x == 2000)
     z = z + 1;
 else
     x = x + 1;</CODE></PRE>
 
-<P>当 boolean 值为 <B>true</B> 时，Jscript 中的 <B>if/else</B> 语句执行一个操作（这样，z = z + 1），而当 boolean 值为 <B>false</B> 时执行另一个操作（x = x + 1）。</P>
+<P>褰�boolean 鍊间负 <B>true</B> 鏃讹紝Jscript 涓殑 <B>if/else</B> 璇彞鎵ц涓�釜鎿嶄綔锛堣繖鏍凤紝z = z + 1锛夛紝鑰屽綋 boolean 鍊间负 <B>false</B> 鏃舵墽琛屽彟涓�釜鎿嶄綔锛坸 = x + 1锛夈�</P>
 
-<P>可以使用任意表达式作比较表达式。任何值为0、null、未定义或空字符串的表达式被解释为 <B>false</B>。其他任意值的表达式解释为 <B>true</B>。例如，可以使用如下表达式：</P>
+<P>鍙互浣跨敤浠绘剰琛ㄨ揪寮忎綔姣旇緝琛ㄨ揪寮忋�浠讳綍鍊间负0銆乶ull銆佹湭瀹氫箟鎴栫┖瀛楃涓茬殑琛ㄨ揪寮忚瑙ｉ噴涓�<B>false</B>銆傚叾浠栦换鎰忓�鐨勮〃杈惧紡瑙ｉ噴涓�<B>true</B>銆備緥濡傦紝鍙互浣跨敤濡備笅琛ㄨ揪寮忥細</P>
 
-<PRE><CODE>if (x = y + z) // </CODE>这可能不是想要的结果<CODE> – </CODE>如下！</PRE>
+<PRE><CODE>if (x = y + z) // </CODE>杩欏彲鑳戒笉鏄兂瑕佺殑缁撴灉<CODE> 鈥�</CODE>濡備笅锛�/PRE>
 
-<P>注意上面的代码并不检查 x 是否与 y+z 相等，因为仅使用了一个等号（赋值）。相反的，上面的代码将 y+z 赋给变量 x，然后检查整个表达式的值是否为零。要检查 x 是否与 y+z 相等，使用如下代码。</P>
+<P>娉ㄦ剰涓婇潰鐨勪唬鐮佸苟涓嶆鏌�x 鏄惁涓�y+z 鐩哥瓑锛屽洜涓轰粎浣跨敤浜嗕竴涓瓑鍙凤紙璧嬪�锛夈�鐩稿弽鐨勶紝涓婇潰鐨勪唬鐮佸皢 y+z 璧嬬粰鍙橀噺 x锛岀劧鍚庢鏌ユ暣涓〃杈惧紡鐨勫�鏄惁涓洪浂銆傝妫�煡 x 鏄惁涓�y+z 鐩哥瓑锛屼娇鐢ㄥ涓嬩唬鐮併�</P>
 
-<PRE><CODE>if (x == y + z) // </CODE>这与上面的代码不同！</PRE>
+<PRE><CODE>if (x == y + z) // </CODE>杩欎笌涓婇潰鐨勪唬鐮佷笉鍚岋紒</PRE>
 
-<P>有关比较的详细信息，请参见<A HREF="conditionals.htm">控制程序的流程</A>。</P>
+<P>鏈夊叧姣旇緝鐨勮缁嗕俊鎭紝璇峰弬瑙�A HREF="conditionals.htm">鎺у埗绋嬪簭鐨勬祦绋�/A>銆�/P>
 
-<H2>Null 数据类型</H2>
+<H2>Null 鏁版嵁绫诲瀷</H2>
 
-<P>在 Jscript 中数据类型 <B>null</B> 只有一个值：null。关键字 null 不能用作函数或变量的名称。</P>
+<P>鍦�Jscript 涓暟鎹被鍨�<B>null</B> 鍙湁涓�釜鍊硷細null銆傚叧閿瓧 null 涓嶈兘鐢ㄤ綔鍑芥暟鎴栧彉閲忕殑鍚嶇О銆�/P>
 
-<P>包含 null 的变量包含“无值”或“无对象”。换句话说，该变量没有保存有效的数、字符串、boolean、数组或对象。可以通过给一个变量赋 null 值来清除变量的内容。</P>
+<P>鍖呭惈 null 鐨勫彉閲忓寘鍚�鏃犲�鈥濇垨鈥滄棤瀵硅薄鈥濄�鎹㈠彞璇濊锛岃鍙橀噺娌℃湁淇濆瓨鏈夋晥鐨勬暟銆佸瓧绗︿覆銆乥oolean銆佹暟缁勬垨瀵硅薄銆傚彲浠ラ�杩囩粰涓�釜鍙橀噺璧�null 鍊兼潵娓呴櫎鍙橀噺鐨勫唴瀹广�</P>
 
-<P>请注意，在 Jscript 中，null 与 0 不相等（与在 C 和 C++ 中不同）。同时应该指出的是，Jscript中 <B>typeof</B> 运算符将报告 null 值为 <B>Object</B> 类型，而非类型 null。这点潜在的混淆是为了向下兼容。</P>
+<P>璇锋敞鎰忥紝鍦�Jscript 涓紝null 涓�0 涓嶇浉绛夛紙涓庡湪 C 鍜�C++ 涓笉鍚岋級銆傚悓鏃跺簲璇ユ寚鍑虹殑鏄紝Jscript涓�<B>typeof</B> 杩愮畻绗﹀皢鎶ュ憡 null 鍊间负 <B>Object</B> 绫诲瀷锛岃�闈炵被鍨�null銆傝繖鐐规綔鍦ㄧ殑娣锋穯鏄负浜嗗悜涓嬪吋瀹广�</P>
 
-<H2>Undefined 数据类型</H2>
+<H2>Undefined 鏁版嵁绫诲瀷</H2>
 
-<P>如下情况使返回 undefined 值：
+<P>濡備笅鎯呭喌浣胯繑鍥�undefined 鍊硷細
 
 <UL type=disc>
-	<LI>对象属性不存在，</li>
+	<LI>瀵硅薄灞炴�涓嶅瓨鍦紝</li>
 
-	<LI>声明了变量但从未赋值。</li>
+	<LI>澹版槑浜嗗彉閲忎絾浠庢湭璧嬪�銆�/li>
 </UL>
 
-<P>注意不能通过与 undefined 做比较来测试一个变量是否存在，虽然可以检查它的类型是否为“undefined”。在以下的代码范例中，假设程序员想测试是否已经声明变量 x ：</P>
+<P>娉ㄦ剰涓嶈兘閫氳繃涓�undefined 鍋氭瘮杈冩潵娴嬭瘯涓�釜鍙橀噺鏄惁瀛樺湪锛岃櫧鐒跺彲浠ユ鏌ュ畠鐨勭被鍨嬫槸鍚︿负鈥渦ndefined鈥濄�鍦ㄤ互涓嬬殑浠ｇ爜鑼冧緥涓紝鍋囪绋嬪簭鍛樻兂娴嬭瘯鏄惁宸茬粡澹版槑鍙橀噺 x 锛�/P>
 
-<PRE><CODE>// </CODE>这种方法不起作用
+<PRE><CODE>// </CODE>杩欑鏂规硶涓嶈捣浣滅敤
 <CODE>if (x == undefined)</CODE>
-<CODE>    // </CODE>作某些操作
+<CODE>    // </CODE>浣滄煇浜涙搷浣�
 
-<CODE>// </CODE>这个方法同样不起作用<CODE>- </CODE>必须检查
-<CODE>// </CODE>字符串<CODE> "undefined"</CODE>
+<CODE>// </CODE>杩欎釜鏂规硶鍚屾牱涓嶈捣浣滅敤<CODE>- </CODE>蹇呴』妫�煡
+<CODE>// </CODE>瀛楃涓�CODE> "undefined"</CODE>
 <CODE>if (typeof(x) == undefined)</CODE>
-<CODE>    // </CODE>作某些操作
+<CODE>    // </CODE>浣滄煇浜涙搷浣�
 
-<CODE>// </CODE>这个方法有效
+<CODE>// </CODE>杩欎釜鏂规硶鏈夋晥
 <CODE>if (typeof(x) == "undefined")</CODE>
-<CODE>    // </CODE>作某些操作</PRE>
+<CODE>    // </CODE>浣滄煇浜涙搷浣�/PRE>
 
-<P>考虑将 undefined 值与null做比较。</P>
+<P>鑰冭檻灏�undefined 鍊间笌null鍋氭瘮杈冦�</P>
 
 <PRE><CODE>someObject.prop == null;</CODE></PRE>
 
-<P>如下情况时，比较的结果为 <B>true</B>，
+<P>濡備笅鎯呭喌鏃讹紝姣旇緝鐨勭粨鏋滀负 <B>true</B>锛�
 
 <UL type=disc>
-	<LI>如果属性 someObject.prop 包含 null 值，</li>
+	<LI>濡傛灉灞炴� someObject.prop 鍖呭惈 null 鍊硷紝</li>
 
-	<LI>如果属性 someObject.prop 不存在。</li>
+	<LI>濡傛灉灞炴� someObject.prop 涓嶅瓨鍦ㄣ�</li>
 
-	<LI>要检查一个对象属性是否存在，可以使用新的 <B>in</B> 运算符：</li>
+	<LI>瑕佹鏌ヤ竴涓璞″睘鎬ф槸鍚﹀瓨鍦紝鍙互浣跨敤鏂扮殑 <B>in</B> 杩愮畻绗︼細</li>
 </UL>
 
 <PRE><CODE>if ("prop" in someObject)
-// someObject </CODE>有属性<CODE> 'prop'</CODE></PRE>
+// someObject </CODE>鏈夊睘鎬�CODE> 'prop'</CODE></PRE>
 <!--Copyright_START-->
 <DIV CLASS="footer">
-<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 版权所有。保留所有权利。使用规定。</a><br>
+<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 鐗堟潈鎵�湁銆備繚鐣欐墍鏈夋潈鍒┿�浣跨敤瑙勫畾銆�/a><br>
 </DIV> <!--Copyright_END-->
 
 </BODY>

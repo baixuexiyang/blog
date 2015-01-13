@@ -1,8 +1,8 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+锘�!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="Content-Type" Content="text/html; charset=gb2312">
-<TITLE>JScript 的变量</TITLE>
+<TITLE>JScript 鐨勫彉閲�/TITLE>
 <!--CSS_START-->
 <style>@import url(../html-vss/msdnie4a.css);</style>
 <link disabled rel="stylesheet" href="../html-vss/msdn_ie3.css">
@@ -15,129 +15,129 @@
 <TABLE class="banner" width="100%" CELLSPACING=0>
 <TR>
 <TD class="bannerleft" nowrap>JScript&nbsp;</TD>
-<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">语言参考</a></TD>
+<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">璇█鍙傝�</a></TD>
 </TR>
 </TABLE>
 <HR>
 <!--End Head-->
 
-<H1><A NAME="declare"></A>JScript 的变量</H1>
+<H1><A NAME="declare"></A>JScript 鐨勫彉閲�/H1>
 
-<P>任何编程语言中，用一块数据量化一个概念。</P>
+<P>浠讳綍缂栫▼璇█涓紝鐢ㄤ竴鍧楁暟鎹噺鍖栦竴涓蹇点�</P>
 
 <PRE><CODE>How old am I?</CODE></PRE>
 
-<P>在 Jscript 中，变量是给概念的名称；它代表了给出瞬间的值。当使用该变量时，实际是用的它所代表的数据。给出示例：</P>
+<P>鍦�Jscript 涓紝鍙橀噺鏄粰姒傚康鐨勫悕绉帮紱瀹冧唬琛ㄤ簡缁欏嚭鐬棿鐨勫�銆傚綋浣跨敤璇ュ彉閲忔椂锛屽疄闄呮槸鐢ㄧ殑瀹冩墍浠ｈ〃鐨勬暟鎹�缁欏嚭绀轰緥锛�/P>
 
-<PRE><CODE>NumberOfDaysLeft = EndDate – TodaysDate;</CODE></PRE>
+<PRE><CODE>NumberOfDaysLeft = EndDate 鈥�TodaysDate;</CODE></PRE>
 
-<P>机械的理解是使用变量来存储、得到并操作脚本中出现的所有的不同值。创建有意义的变量名称；便于别人理解脚本。</P>
+<P>鏈烘鐨勭悊瑙ｆ槸浣跨敤鍙橀噺鏉ュ瓨鍌ㄣ�寰楀埌骞舵搷浣滆剼鏈腑鍑虹幇鐨勬墍鏈夌殑涓嶅悓鍊笺�鍒涘缓鏈夋剰涔夌殑鍙橀噺鍚嶇О锛涗究浜庡埆浜虹悊瑙ｈ剼鏈�</P>
 
-<H2>变量声明</H2>
+<H2>鍙橀噺澹版槑</H2>
 
-<P>变量在脚本中的第一次出现是在声明中。变量在第一次用到时就设置于内存中，便于后来在脚本中引用。使用变量之前先进行声明。可以使用 <B>var</B> 关键字来进行变量声明。</P>
+<P>鍙橀噺鍦ㄨ剼鏈腑鐨勭涓�鍑虹幇鏄湪澹版槑涓�鍙橀噺鍦ㄧ涓�鐢ㄥ埌鏃跺氨璁剧疆浜庡唴瀛樹腑锛屼究浜庡悗鏉ュ湪鑴氭湰涓紩鐢ㄣ�浣跨敤鍙橀噺涔嬪墠鍏堣繘琛屽０鏄庛�鍙互浣跨敤 <B>var</B> 鍏抽敭瀛楁潵杩涜鍙橀噺澹版槑銆�/P>
 
-<PRE><CODE>var count;  // </CODE>单个声明。
-<CODE>var count, amount, level;  // </CODE>用单个<CODE> var </CODE>关键字声明的多个声明。
-<CODE>var count = 0, amount = 100;  // </CODE>一条语句中的变量声明和初始化。</PRE>
+<PRE><CODE>var count;  // </CODE>鍗曚釜澹版槑銆�
+<CODE>var count, amount, level;  // </CODE>鐢ㄥ崟涓�CODE> var </CODE>鍏抽敭瀛楀０鏄庣殑澶氫釜澹版槑銆�
+<CODE>var count = 0, amount = 100;  // </CODE>涓�潯璇彞涓殑鍙橀噺澹版槑鍜屽垵濮嬪寲銆�/PRE>
 
-<P>如果在 <B>var </B>语句中没有初始化变量，变量自动取 JScript 值 <B>undefined</B>。尽管并不安全，但声明语句中忽略 <B>var</B> 关键字是合法的 JScript 语法。这时，JScript 解释器给予变量全局范围的可见度。当在过程级中声明一个变量时，它不能用于全局范围；这种情况下，变量声明<U>必须</U>用 <B>var</B> 关键字。</P>
+<P>濡傛灉鍦�<B>var </B>璇彞涓病鏈夊垵濮嬪寲鍙橀噺锛屽彉閲忚嚜鍔ㄥ彇 JScript 鍊�<B>undefined</B>銆傚敖绠″苟涓嶅畨鍏紝浣嗗０鏄庤鍙ヤ腑蹇界暐 <B>var</B> 鍏抽敭瀛楁槸鍚堟硶鐨�JScript 璇硶銆傝繖鏃讹紝JScript 瑙ｉ噴鍣ㄧ粰浜堝彉閲忓叏灞�寖鍥寸殑鍙搴︺�褰撳湪杩囩▼绾т腑澹版槑涓�釜鍙橀噺鏃讹紝瀹冧笉鑳界敤浜庡叏灞�寖鍥达紱杩欑鎯呭喌涓嬶紝鍙橀噺澹版槑<U>蹇呴』</U>鐢�<B>var</B> 鍏抽敭瀛椼�</P>
 
-<H2>变量命名</H2>
+<H2>鍙橀噺鍛藉悕</H2>
 
-<P>变量名称是一个标识符。Jscript 中，用标识符来：
-
-<UL type=disc>
-	<LI>命名变量，</li>
-
-	<LI>命名函数，</li>
-
-	<LI>给出循环的标签。</li>
-</UL>
-
-<P>JScript 是一种区分大小写的语言。因此变量名称 <I>myCounter </I>和变量名称 <I>mYCounter</I> 是不一样的。变量的名称可以是任意长度。创建合法的变量名称应遵循如下规则：
+<P>鍙橀噺鍚嶇О鏄竴涓爣璇嗙銆侸script 涓紝鐢ㄦ爣璇嗙鏉ワ細
 
 <UL type=disc>
-	<LI>第一个字符必须是一个 ASCII 字母（大小写均可），或一个下划线(_)。注意第一个字符不能是数字。</li>
+	<LI>鍛藉悕鍙橀噺锛�/li>
 
-	<LI>后续的字符必须是字母、数字或下划线。</li>
+	<LI>鍛藉悕鍑芥暟锛�/li>
 
-	<LI>变量名称一定不能是 <A HREF="jsreserved.htm">保留字</A>。 </li>
+	<LI>缁欏嚭寰幆鐨勬爣绛俱�</li>
 </UL>
 
-<P>下面给出合法变量名称的一些示例： </P>
+<P>JScript 鏄竴绉嶅尯鍒嗗ぇ灏忓啓鐨勮瑷��鍥犳鍙橀噺鍚嶇О <I>myCounter </I>鍜屽彉閲忓悕绉�<I>mYCounter</I> 鏄笉涓�牱鐨勩�鍙橀噺鐨勫悕绉板彲浠ユ槸浠绘剰闀垮害銆傚垱寤哄悎娉曠殑鍙橀噺鍚嶇О搴旈伒寰涓嬭鍒欙細
+
+<UL type=disc>
+	<LI>绗竴涓瓧绗﹀繀椤绘槸涓�釜 ASCII 瀛楁瘝锛堝ぇ灏忓啓鍧囧彲锛夛紝鎴栦竴涓笅鍒掔嚎(_)銆傛敞鎰忕涓�釜瀛楃涓嶈兘鏄暟瀛椼�</li>
+
+	<LI>鍚庣画鐨勫瓧绗﹀繀椤绘槸瀛楁瘝銆佹暟瀛楁垨涓嬪垝绾裤�</li>
+
+	<LI>鍙橀噺鍚嶇О涓�畾涓嶈兘鏄�<A HREF="jsreserved.htm">淇濈暀瀛�/A>銆�</li>
+</UL>
+
+<P>涓嬮潰缁欏嚭鍚堟硶鍙橀噺鍚嶇О鐨勪竴浜涚ず渚嬶細 </P>
 
 <PRE><CODE>_pagecount 
 Part9 
 Number_Items </CODE></PRE>
 
-<P>下面给出无效变量名称的一些示例： </P>
+<P>涓嬮潰缁欏嚭鏃犳晥鍙橀噺鍚嶇О鐨勪竴浜涚ず渚嬶細 </P>
 
-<PRE><CODE>99Balloons // </CODE>不能以数字开头。
-<CODE>Smith&amp;Wesson // </CODE>“与”符号（<CODE>&amp;</CODE>）字符用于变量名称是无效的。</PRE>
+<PRE><CODE>99Balloons // </CODE>涓嶈兘浠ユ暟瀛楀紑澶淬�
+<CODE>Smith&amp;Wesson // </CODE>鈥滀笌鈥濈鍙凤紙<CODE>&amp;</CODE>锛夊瓧绗︾敤浜庡彉閲忓悕绉版槸鏃犳晥鐨勩�</PRE>
 
-<P>当要声明一个变量并进行初始化，但又不想指定任何特殊值，可以赋值为 JScript 值 <A HREF="glossary.htm#defnulljs">null</A>。下面给出示例。</P>
+<P>褰撹澹版槑涓�釜鍙橀噺骞惰繘琛屽垵濮嬪寲锛屼絾鍙堜笉鎯虫寚瀹氫换浣曠壒娈婂�锛屽彲浠ヨ祴鍊间负 JScript 鍊�<A HREF="glossary.htm#defnulljs">null</A>銆備笅闈㈢粰鍑虹ず渚嬨�</P>
 
 <PRE><CODE>var bestAge = null;
-var muchTooOld = 3 * bestAge; // muchTooOld </CODE>的值为<CODE> 0</CODE>。</PRE>
+var muchTooOld = 3 * bestAge; // muchTooOld </CODE>鐨勫�涓�CODE> 0</CODE>銆�/PRE>
 
-<P>如果声明了一个变量但没有对其赋值，该变量存在，其值为Jscript 值 <A HREF="glossary.htm#defundefined">undefined</A>。下面给出示例。</P>
+<P>濡傛灉澹版槑浜嗕竴涓彉閲忎絾娌℃湁瀵瑰叾璧嬪�锛岃鍙橀噺瀛樺湪锛屽叾鍊间负Jscript 鍊�<A HREF="glossary.htm#defundefined">undefined</A>銆備笅闈㈢粰鍑虹ず渚嬨�</P>
 
 <PRE><CODE>var currentCount;
-var finalCount = 1 * currentCount; // finalCount </CODE>的值为<CODE> NaN</CODE>，因为<CODE> currentCount </CODE>为<CODE> undefined</CODE>。</PRE>
+var finalCount = 1 * currentCount; // finalCount </CODE>鐨勫�涓�CODE> NaN</CODE>锛屽洜涓�CODE> currentCount </CODE>涓�CODE> undefined</CODE>銆�/PRE>
 
-<P>注意在 JScript 中 <B>null</B> 和 <B>undefined</B> 的主要区别是 <B>null</B> 的操作象数字 0，而 <B>undefined</B> 的操作象特殊值<B>NaN</B> （不是一个数字）。对 <B>null</B> 值和 <B>undefined</B> 值作比较总是相等的。</P>
+<P>娉ㄦ剰鍦�JScript 涓�<B>null</B> 鍜�<B>undefined</B> 鐨勪富瑕佸尯鍒槸 <B>null</B> 鐨勬搷浣滆薄鏁板瓧 0锛岃� <B>undefined</B> 鐨勬搷浣滆薄鐗规畩鍊�B>NaN</B> 锛堜笉鏄竴涓暟瀛楋級銆傚 <B>null</B> 鍊煎拰 <B>undefined</B> 鍊间綔姣旇緝鎬绘槸鐩哥瓑鐨勩�</P>
 
-<P>可以不用 <B>var </B>关键字声明变量，并赋值。这就是隐式声明。</P>
+<P>鍙互涓嶇敤 <B>var </B>鍏抽敭瀛楀０鏄庡彉閲忥紝骞惰祴鍊笺�杩欏氨鏄殣寮忓０鏄庛�</P>
 
-<PRE><CODE>noStringAtAll = ""; // </CODE>隐式声明变量<CODE> noStringAtAll</CODE>。</PRE>
+<PRE><CODE>noStringAtAll = ""; // </CODE>闅愬紡澹版槑鍙橀噺<CODE> noStringAtAll</CODE>銆�/PRE>
 
-<P>不能使用未经过声明的变量。</P>
+<P>涓嶈兘浣跨敤鏈粡杩囧０鏄庣殑鍙橀噺銆�/P>
 
-<PRE><CODE>var volume = length * width; // </CODE>错误<CODE> </CODE>—<CODE> length </CODE>和<CODE> width </CODE>并不存在。</PRE>
+<PRE><CODE>var volume = length * width; // </CODE>閿欒<CODE> </CODE>鈥�CODE> length </CODE>鍜�CODE> width </CODE>骞朵笉瀛樺湪銆�/PRE>
 
-<H2>强制转换</H2>
+<H2>寮哄埗杞崲</H2>
 
-<P>表达式中操作项的数据类型相同时 JScript 解释器才能对其求值。如果表达式不经过强制转换就试图对两个不同的数据类型（如一个为数字，另一个为字符串）执行运算，将产生错误结果。但在 Jscript 中情况就不同了。</P>
+<P>琛ㄨ揪寮忎腑鎿嶄綔椤圭殑鏁版嵁绫诲瀷鐩稿悓鏃�JScript 瑙ｉ噴鍣ㄦ墠鑳藉鍏舵眰鍊笺�濡傛灉琛ㄨ揪寮忎笉缁忚繃寮哄埗杞崲灏辫瘯鍥惧涓や釜涓嶅悓鐨勬暟鎹被鍨嬶紙濡備竴涓负鏁板瓧锛屽彟涓�釜涓哄瓧绗︿覆锛夋墽琛岃繍绠楋紝灏嗕骇鐢熼敊璇粨鏋溿�浣嗗湪 Jscript 涓儏鍐靛氨涓嶅悓浜嗐�</P>
 
-<P>JScript 是一种自由类型的语言。它的变量没有预定类型（相对于强类型语言，如 C++）。相反，JScript 变量的类型相应于他们包含的值的类型。这种操作的好处是能将值作为另一类型处理。</P>
+<P>JScript 鏄竴绉嶈嚜鐢辩被鍨嬬殑璇█銆傚畠鐨勫彉閲忔病鏈夐瀹氱被鍨嬶紙鐩稿浜庡己绫诲瀷璇█锛屽 C++锛夈�鐩稿弽锛孞Script 鍙橀噺鐨勭被鍨嬬浉搴斾簬浠栦滑鍖呭惈鐨勫�鐨勭被鍨嬨�杩欑鎿嶄綔鐨勫ソ澶勬槸鑳藉皢鍊间綔涓哄彟涓�被鍨嬪鐞嗐�</P>
 
-<P>在 Jscript 中，可以对不同类型的值执行运算，不必担心 JScript 解释器产生异常。相反，JScript 解释器自动将数据类型之一改变（强制转换）为另一种数据类型，然后执行运算。例如：</P>
+<P>鍦�Jscript 涓紝鍙互瀵逛笉鍚岀被鍨嬬殑鍊兼墽琛岃繍绠楋紝涓嶅繀鎷呭績 JScript 瑙ｉ噴鍣ㄤ骇鐢熷紓甯搞�鐩稿弽锛孞Script 瑙ｉ噴鍣ㄨ嚜鍔ㄥ皢鏁版嵁绫诲瀷涔嬩竴鏀瑰彉锛堝己鍒惰浆鎹級涓哄彟涓�鏁版嵁绫诲瀷锛岀劧鍚庢墽琛岃繍绠椼�渚嬪锛�/P>
 
 <TABLE border=1 cellspacing=0 cols=2 frame=box rules=all>
 
 <TR VALIGN="top">
-<TH width=43%>运算</TH>
-<TH width=57%>结果</TH>
+<TH width=43%>杩愮畻</TH>
+<TH width=57%>缁撴灉</TH>
 </TR>
 
 <TR VALIGN="top">
-<TD width=43%>数值与字符串相加</TD>
-<TD width=57%>将数值强制转换为字符串。</TD>
+<TD width=43%>鏁板�涓庡瓧绗︿覆鐩稿姞</TD>
+<TD width=57%>灏嗘暟鍊煎己鍒惰浆鎹负瀛楃涓层�</TD>
 </TR>
 
 <TR VALIGN="top">
-<TD width=43%>布尔值与字符串相加</TD>
-<TD width=57%>将布尔值强制转换为字符串。</TD>
+<TD width=43%>甯冨皵鍊间笌瀛楃涓茬浉鍔�/TD>
+<TD width=57%>灏嗗竷灏斿�寮哄埗杞崲涓哄瓧绗︿覆銆�/TD>
 </TR>
 
 <TR VALIGN="top">
-<TD width=43%>数值与布尔值相加</TD>
-<TD width=57%>将布尔值强制转换为数值。</TD>
+<TD width=43%>鏁板�涓庡竷灏斿�鐩稿姞</TD>
+<TD width=57%>灏嗗竷灏斿�寮哄埗杞崲涓烘暟鍊笺�</TD>
 </TR>
 </TABLE><BR>
 
-<P>考虑下面的示例。</P>
+<P>鑰冭檻涓嬮潰鐨勭ず渚嬨�</P>
 
-<PRE><CODE>var x = 2000;      // </CODE>一个数字。
-<CODE>var y = "Hello";   // </CODE>一个字符串。
-<CODE>x = x + y;         // </CODE>将数字强制转换为字符串。
-<CODE>document.write(x); // </CODE>输出<CODE> 2000Hello</CODE>。</PRE>
+<PRE><CODE>var x = 2000;      // </CODE>涓�釜鏁板瓧銆�
+<CODE>var y = "Hello";   // </CODE>涓�釜瀛楃涓层�
+<CODE>x = x + y;         // </CODE>灏嗘暟瀛楀己鍒惰浆鎹负瀛楃涓层�
+<CODE>document.write(x); // </CODE>杈撳嚭<CODE> 2000Hello</CODE>銆�/PRE>
 
-<P>要想显式地将字符串转换为整数，使用 <A HREF="jsmthparseint.htm">parseInt 方法</A>。要想显式地将字符串转换为数字，使用 <A HREF="jsmthparsefloat.htm">parseFloat 方法</A>。请注意，比较大小时字符串自动转换为相等的数字，但加法（连接）运算时保留为字符串。</P>
+<P>瑕佹兂鏄惧紡鍦板皢瀛楃涓茶浆鎹负鏁存暟锛屼娇鐢�<A HREF="jsmthparseint.htm">parseInt 鏂规硶</A>銆傝鎯虫樉寮忓湴灏嗗瓧绗︿覆杞崲涓烘暟瀛楋紝浣跨敤 <A HREF="jsmthparsefloat.htm">parseFloat 鏂规硶</A>銆傝娉ㄦ剰锛屾瘮杈冨ぇ灏忔椂瀛楃涓茶嚜鍔ㄨ浆鎹负鐩哥瓑鐨勬暟瀛楋紝浣嗗姞娉曪紙杩炴帴锛夎繍绠楁椂淇濈暀涓哄瓧绗︿覆銆�/P>
 <!--Copyright_START-->
 <DIV CLASS="footer">
-<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 版权所有。保留所有权利。使用规定。</a><br>
+<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 鐗堟潈鎵�湁銆備繚鐣欐墍鏈夋潈鍒┿�浣跨敤瑙勫畾銆�/a><br>
 </DIV> <!--Copyright_END-->
 
 </BODY>

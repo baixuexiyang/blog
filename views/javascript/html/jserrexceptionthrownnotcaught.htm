@@ -2,7 +2,7 @@
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="Content-Type" Content="text/html; charset=gb2312">
-<TITLE>�쳣�׳������޷�ץס</TITLE>
+<TITLE>异常抛出，但无法抓住</TITLE>
 <!--CSS_START-->
 <style>@import url(../html-vss/msdnie4a.css);</style>
 <link disabled rel="stylesheet" href="../html-vss/msdn_ie3.css">
@@ -15,32 +15,32 @@
 <TABLE class="banner" width="100%" CELLSPACING=0>
 <TR>
 <TD class="bannerleft" nowrap>JScript&nbsp;</TD>
-<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">���Բο�</a></TD>
+<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">语言参考</a></TD>
 </TR>
 </TABLE>
 <HR>
 <!--End Head-->
 
-<H1><A NAME="jserrexceptionthrownnotcaught"></A>�쳣�׳������޷�ץס</H1>
+<H1><A NAME="jserrexceptionthrownnotcaught"></A>异常抛出，但无法抓住</H1>
 
-<P>�ڴ����а�����һ�� <B>throw</B> ��䣬��û�н��������ĳ�� <B>try</B> �����ڣ�����û����ص� <B>catch</B> ��������������쳣���� <B>try </B>������ʹ�� <B>throw </B>��䱻�׳�������Ӧ���� <B>try </B>������� <B>catch </B>���ץס��</P>
+<P>在代码中包括了一条 <B>throw</B> 语句，但没有将其包含在某个 <B>try</B> 语句块内，或者没有相关的 <B>catch</B> 语句块来捕获错误。异常是在 <B>try </B>语句块中使用 <B>throw </B>语句被抛出，并且应该由 <B>try </B>语句块外的 <B>catch </B>语句抓住。</P>
 
-<P class=label><B>Ҫ�����˴���</B>
+<P class=label><B>要改正此错误</B>
 
 <UL type=disc>
-	<LI>�� <B>try </B>���齫���ܲ����쳣�Ĵ����ס����ȷ��������һ����Ӧ�� <B>catch</B> ���顣</li>
+	<LI>用 <B>try </B>语句块将可能产生异常的代码封住，并确保外面有一个相应的 <B>catch</B> 语句块。</li>
 
-	<LI>ȷ�� catch �����Ϊ��ȷ���쳣��ʽ��</li>
+	<LI>确认 catch 语句中为正确的异常格式。</li>
 
-	<LI>����쳣���ٴ��׳���ȷ�ϴ�����Ӧ�� catch ��䡣</li>
+	<LI>如果异常被再次抛出，确认存在相应的 catch 语句。</li>
 </UL>
 
-<H4>�����</H4>
+<H4>请参阅</H4>
 
-<P><A HREF="jsobjerror.htm">Error ����</A> | <A HREF="jsstmthrow.htm">throw ���</A> | <A HREF="jsstmtrycatch.htm">try...catch ���</A></P>
+<P><A HREF="jsobjerror.htm">Error 对象</A> | <A HREF="jsstmthrow.htm">throw 语句</A> | <A HREF="jsstmtrycatch.htm">try...catch 语句</A></P>
 <!--Copyright_START-->
 <DIV CLASS="footer">
-<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation ��Ȩ���С���������Ȩ����ʹ�ù涨��</a><br>
+<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 版权所有。保留所有权利。使用规定。</a><br>
 </DIV> <!--Copyright_END-->
 
 </BODY>

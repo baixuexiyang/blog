@@ -98,6 +98,7 @@ app.use(function (req, res, next) {
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.static(path.join(__dirname, 'views/jquery')));
 app.use(express.static(path.join(__dirname, 'views/javascript')));
+// app.use(express.static(path.join(__dirname, 'views/css3.0')));
 //即时刷新功能，结合grunt watch任务使用
 // if (config.liveReload) {
 //     var liveReload = require('./helper/livereload');

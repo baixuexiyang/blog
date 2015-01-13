@@ -31,6 +31,10 @@ module.exports = function (app) {
         res.render('javascript.html');
         res.end();
     });
+    // app.get(/css3.html/, function(req, res, nect) {
+    //     res.render('css3.html');
+    //     res.end();
+    // });
     app.post(/\/mockup\/(json\/)?([\w\-]+\.json)/i, mockup.sendJson);
     app.get(/\/mockup\/(json\/)?([\w\-]+\.json)/i, mockup.sendJson);
     //匹配mockup/?q=xxx

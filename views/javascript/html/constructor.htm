@@ -1,8 +1,8 @@
-﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+锘�!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="Content-Type" Content="text/html; charset=gb2312">
-<TITLE>创建高级对象</TITLE>
+<TITLE>鍒涘缓楂樼骇瀵硅薄</TITLE>
 <!--CSS_START-->
 <style>@import url(../html-vss/msdnie4a.css);</style>
 <link disabled rel="stylesheet" href="../html-vss/msdn_ie3.css">
@@ -15,73 +15,73 @@
 <TABLE class="banner" width="100%" CELLSPACING=0>
 <TR>
 <TD class="bannerleft" nowrap>JScript&nbsp;</TD>
-<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">语言参考</a></TD>
+<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">璇█鍙傝�</a></TD>
 </TR>
 </TABLE>
 <HR>
 <!--End Head-->
 
-<H1><A NAME="constructor"></A>创建高级对象</H1>
+<H1><A NAME="constructor"></A>鍒涘缓楂樼骇瀵硅薄</H1>
 
-<H2>使用构造函数来创建对象</H2>
+<H2>浣跨敤鏋勯�鍑芥暟鏉ュ垱寤哄璞�/H2>
 
-<P>构造函数是一个函数，调用它来例示并初始化特殊类型的<A HREF="objects.htm">对象</A>。可以使用 <B>new</B> 关键字来调用一个构造函数。下面给出了使用构造函数的新示例。</P>
+<P>鏋勯�鍑芥暟鏄竴涓嚱鏁帮紝璋冪敤瀹冩潵渚嬬ず骞跺垵濮嬪寲鐗规畩绫诲瀷鐨�A HREF="objects.htm">瀵硅薄</A>銆傚彲浠ヤ娇鐢�<B>new</B> 鍏抽敭瀛楁潵璋冪敤涓�釜鏋勯�鍑芥暟銆備笅闈㈢粰鍑轰簡浣跨敤鏋勯�鍑芥暟鐨勬柊绀轰緥銆�/P>
 
-<PRE><CODE>var myObject = new Object();             // </CODE>创建没有属性的通用对象。
-<CODE>var myBirthday = new Date(1961, 5, 10);  // </CODE>创建一个<CODE> Date </CODE>对象。
-<CODE>var myCar = new Car();                   // </CODE>创建一个用户定义的对象，并初始化其属性。</PRE>
+<PRE><CODE>var myObject = new Object();             // </CODE>鍒涘缓娌℃湁灞炴�鐨勯�鐢ㄥ璞°�
+<CODE>var myBirthday = new Date(1961, 5, 10);  // </CODE>鍒涘缓涓�釜<CODE> Date </CODE>瀵硅薄銆�
+<CODE>var myCar = new Car();                   // </CODE>鍒涘缓涓�釜鐢ㄦ埛瀹氫箟鐨勫璞★紝骞跺垵濮嬪寲鍏跺睘鎬с�</PRE>
 
-<P>通过构造函数将一个参数作为特定的 <B>this</B> 关键字的值传递给新创建的空对象。然后构造函数负责为新对象执行适应的初始化（创建属性并给出其初始值）。完成后，构造函数返回它所构造的对象的一个参数。</P>
+<P>閫氳繃鏋勯�鍑芥暟灏嗕竴涓弬鏁颁綔涓虹壒瀹氱殑 <B>this</B> 鍏抽敭瀛楃殑鍊间紶閫掔粰鏂板垱寤虹殑绌哄璞°�鐒跺悗鏋勯�鍑芥暟璐熻矗涓烘柊瀵硅薄鎵ц閫傚簲鐨勫垵濮嬪寲锛堝垱寤哄睘鎬у苟缁欏嚭鍏跺垵濮嬪�锛夈�瀹屾垚鍚庯紝鏋勯�鍑芥暟杩斿洖瀹冩墍鏋勯�鐨勫璞＄殑涓�釜鍙傛暟銆�/P>
 
-<H2>编写构造函数</H2>
+<H2>缂栧啓鏋勯�鍑芥暟</H2>
 
-<P>可以使用 <B>new</B> 运算符结合像 <B>Object()</B>、<B>Date()</B> 和 <B>Function()</B> 这样的预定义的构造函数来创建对象并对其初始化。面向对象的编程其强有力的特征是定义自定义构造函数以创建脚本中使用的自定义对象的能力。创建了自定义的构造函数，这样就可以创建具有已定义属性的对象。下面是自定义函数的示例（注意 <B>this </B>关键字的使用）。</P>
+<P>鍙互浣跨敤 <B>new</B> 杩愮畻绗︾粨鍚堝儚 <B>Object()</B>銆�B>Date()</B> 鍜�<B>Function()</B> 杩欐牱鐨勯瀹氫箟鐨勬瀯閫犲嚱鏁版潵鍒涘缓瀵硅薄骞跺鍏跺垵濮嬪寲銆傞潰鍚戝璞＄殑缂栫▼鍏跺己鏈夊姏鐨勭壒寰佹槸瀹氫箟鑷畾涔夋瀯閫犲嚱鏁颁互鍒涘缓鑴氭湰涓娇鐢ㄧ殑鑷畾涔夊璞＄殑鑳藉姏銆傚垱寤轰簡鑷畾涔夌殑鏋勯�鍑芥暟锛岃繖鏍峰氨鍙互鍒涘缓鍏锋湁宸插畾涔夊睘鎬х殑瀵硅薄銆備笅闈㈡槸鑷畾涔夊嚱鏁扮殑绀轰緥锛堟敞鎰�<B>this </B>鍏抽敭瀛楃殑浣跨敤锛夈�</P>
 
 <PRE><CODE>function Circle (xPoint, yPoint, radius) {
-    this.x = xPoint;  // </CODE>圆心的<CODE> x </CODE>坐标。
-<CODE>    this.y = yPoint;  // </CODE>圆心的<CODE> y </CODE>坐标。
-<CODE>    this.r = radius;  // </CODE>圆的半径。
+    this.x = xPoint;  // </CODE>鍦嗗績鐨�CODE> x </CODE>鍧愭爣銆�
+<CODE>    this.y = yPoint;  // </CODE>鍦嗗績鐨�CODE> y </CODE>鍧愭爣銆�
+<CODE>    this.r = radius;  // </CODE>鍦嗙殑鍗婂緞銆�
 }</PRE>
 
-<P>调用 Circle 构造函数时，给出圆心点的值和圆的半径（所有这些元素是完全定义一个独特的圆对象所必需的）。结束时 Circle 对象包含三个属性。下面是如何例示 Circle 对象。</P>
+<P>璋冪敤 Circle 鏋勯�鍑芥暟鏃讹紝缁欏嚭鍦嗗績鐐圭殑鍊煎拰鍦嗙殑鍗婂緞锛堟墍鏈夎繖浜涘厓绱犳槸瀹屽叏瀹氫箟涓�釜鐙壒鐨勫渾瀵硅薄鎵�繀闇�殑锛夈�缁撴潫鏃�Circle 瀵硅薄鍖呭惈涓変釜灞炴�銆備笅闈㈡槸濡備綍渚嬬ず Circle 瀵硅薄銆�/P>
 
 <PRE><CODE>var aCircle = new Circle(5, 11, 99);</CODE></PRE>
 
-<H2>使用原型来创建对象</H2>
+<H2>浣跨敤鍘熷瀷鏉ュ垱寤哄璞�/H2>
 
-<P>在编写构造函数时，可以使用原型对象（它本身是所有构造函数的一个属性）的属性来创建继承属性和共享方法。原型属性和方法将按引用复制给类中的每个对象，因此它们都具有相同的值。可以在一个对象中更改原型属性的值，新的值将覆盖默认值，但仅在该实例中有效。属于这个类的其他对象不受此更改的影响。下面给出了使用自定义构造函数的示例，Circle（注意 <B>this</B> 关键字的使用）。</P>
+<P>鍦ㄧ紪鍐欐瀯閫犲嚱鏁版椂锛屽彲浠ヤ娇鐢ㄥ師鍨嬪璞★紙瀹冩湰韬槸鎵�湁鏋勯�鍑芥暟鐨勪竴涓睘鎬э級鐨勫睘鎬ф潵鍒涘缓缁ф壙灞炴�鍜屽叡浜柟娉曘�鍘熷瀷灞炴�鍜屾柟娉曞皢鎸夊紩鐢ㄥ鍒剁粰绫讳腑鐨勬瘡涓璞★紝鍥犳瀹冧滑閮藉叿鏈夌浉鍚岀殑鍊笺�鍙互鍦ㄤ竴涓璞′腑鏇存敼鍘熷瀷灞炴�鐨勫�锛屾柊鐨勫�灏嗚鐩栭粯璁ゅ�锛屼絾浠呭湪璇ュ疄渚嬩腑鏈夋晥銆傚睘浜庤繖涓被鐨勫叾浠栧璞′笉鍙楁鏇存敼鐨勫奖鍝嶃�涓嬮潰缁欏嚭浜嗕娇鐢ㄨ嚜瀹氫箟鏋勯�鍑芥暟鐨勭ず渚嬶紝Circle锛堟敞鎰�<B>this</B> 鍏抽敭瀛楃殑浣跨敤锛夈�</P>
 
 <PRE><CODE>Circle.prototype.pi = Math.PI;
 function ACirclesArea () {
-    return this.pi * this.r * this.r; // </CODE>计算圆面积的公式为<CODE> ?r<SUP>2</SUP></CODE>。
+    return this.pi * this.r * this.r; // </CODE>璁＄畻鍦嗛潰绉殑鍏紡涓�CODE> ?r<SUP>2</SUP></CODE>銆�
 }
-<CODE>Circle.prototype.area = ACirclesArea; // </CODE>计算圆面积的函数现在是<CODE> Circle Prototype </CODE>对象的一个方法。
-<CODE>var a = ACircle.area();               // </CODE>此为如何在<CODE> Circle </CODE>对象上调用面积函数。</PRE>
+<CODE>Circle.prototype.area = ACirclesArea; // </CODE>璁＄畻鍦嗛潰绉殑鍑芥暟鐜板湪鏄�CODE> Circle Prototype </CODE>瀵硅薄鐨勪竴涓柟娉曘�
+<CODE>var a = ACircle.area();               // </CODE>姝や负濡備綍鍦�CODE> Circle </CODE>瀵硅薄涓婅皟鐢ㄩ潰绉嚱鏁般�</PRE>
 
-<P>使用这个原则，可以给预定义的构造函数（都具有原型对象）定义附加属性。例如，如果想要能够删除字符串的前后空格（与 VBScript 的 <B>Trim</B> 函数类似），就可以给 <B>String</B> 原型对象创建自己的方法。</P>
+<P>浣跨敤杩欎釜鍘熷垯锛屽彲浠ョ粰棰勫畾涔夌殑鏋勯�鍑芥暟锛堥兘鍏锋湁鍘熷瀷瀵硅薄锛夊畾涔夐檮鍔犲睘鎬с�渚嬪锛屽鏋滄兂瑕佽兘澶熷垹闄ゅ瓧绗︿覆鐨勫墠鍚庣┖鏍硷紙涓�VBScript 鐨�<B>Trim</B> 鍑芥暟绫讳技锛夛紝灏卞彲浠ョ粰 <B>String</B> 鍘熷瀷瀵硅薄鍒涘缓鑷繁鐨勬柟娉曘�</P>
 
-<PRE><CODE>// </CODE>增加一个名为<CODE> trim </CODE>的函数作为
-<CODE>// String </CODE>构造函数的原型对象的一个方法。
+<PRE><CODE>// </CODE>澧炲姞涓�釜鍚嶄负<CODE> trim </CODE>鐨勫嚱鏁颁綔涓�
+<CODE>// String </CODE>鏋勯�鍑芥暟鐨勫師鍨嬪璞＄殑涓�釜鏂规硶銆�
 <CODE>String.prototype.trim = function()</CODE>
 <CODE>{</CODE>
-<CODE>    // </CODE>用正则表达式将前后空格
-<CODE>    // </CODE>用空字符串替代。
+<CODE>    // </CODE>鐢ㄦ鍒欒〃杈惧紡灏嗗墠鍚庣┖鏍�
+<CODE>    // </CODE>鐢ㄧ┖瀛楃涓叉浛浠ｃ�
 <CODE>    return this.replace(/(^\s*)|(\s*$)/g, "");</CODE>
 <CODE>}</CODE>
 
-<CODE>// </CODE>有空格的字符串
+<CODE>// </CODE>鏈夌┖鏍肩殑瀛楃涓�
 <CODE>var s = "    leading and trailing spaces    ";</CODE>
 
-<CODE>// </CODE>显示<CODE> "    leading and trailing spaces     (35)"</CODE>
+<CODE>// </CODE>鏄剧ず<CODE> "    leading and trailing spaces     (35)"</CODE>
 <CODE>window.alert(s + " (" + s.length + ")");</CODE>
 
-<CODE>// </CODE>删除前后空格
+<CODE>// </CODE>鍒犻櫎鍓嶅悗绌烘牸
 <CODE>s = s.trim();</CODE>
-<CODE>// </CODE>显示<CODE>"leading and trailing spaces (27)"</CODE>
+<CODE>// </CODE>鏄剧ず<CODE>"leading and trailing spaces (27)"</CODE>
 <CODE>window.alert(s + " (" + s.length + ")");</CODE></PRE>
 <!--Copyright_START-->
 <DIV CLASS="footer">
-<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 版权所有。保留所有权利。使用规定。</a><br>
+<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 鐗堟潈鎵�湁銆備繚鐣欐墍鏈夋潈鍒┿�浣跨敤瑙勫畾銆�/a><br>
 </DIV> <!--Copyright_END-->
 
 </BODY>
