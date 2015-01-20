@@ -1,8 +1,8 @@
-锘�!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="Content-Type" Content="text/html; charset=gb2312">
-<TITLE>鍒涘缓鑷繁鐨勫璞�/TITLE>
+<TITLE>创建自己的对象</TITLE>
 <!--CSS_START-->
 <style>@import url(../html-vss/msdnie4a.css);</style>
 <link disabled rel="stylesheet" href="../html-vss/msdn_ie3.css">
@@ -15,89 +15,89 @@
 <TABLE class="banner" width="100%" CELLSPACING=0>
 <TR>
 <TD class="bannerleft" nowrap>JScript&nbsp;</TD>
-<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">璇█鍙傝�</a></TD>
+<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">语言参考</a></TD>
 </TR>
 </TABLE>
 <HR>
 <!--End Head-->
 
-<H1><A NAME="jsconcreatingownobjects"></A>鍒涘缓鑷繁鐨勫璞�/H1>
+<H1><A NAME="jsconcreatingownobjects"></A>创建自己的对象</H1>
 
-<P>瑕佸垱寤鸿嚜宸辩殑瀵硅薄瀹炰緥锛屽繀椤婚鍏堜负鍏跺畾涔変竴涓瀯閫犲嚱鏁般�鏋勯�鍑芥暟鍒涘缓涓�釜鏂板璞★紝璧嬩簣瀵硅薄灞炴�锛屽苟鍦ㄥ悎閫傜殑鏃跺�璧嬩簣鏂规硶銆備緥濡傦紝涓嬮潰鐨勭ず渚嬩负 pasta 瀵硅薄瀹氫箟浜嗘瀯閫犲嚱鏁般�娉ㄦ剰 <B>this</B> 鍏抽敭瀛楃殑浣跨敤锛屽畠鎸囧悜褰撳墠瀵硅薄銆�/P>
+<P>要创建自己的对象实例，必须首先为其定义一个构造函数。构造函数创建一个新对象，赋予对象属性，并在合适的时候赋予方法。例如，下面的示例为 pasta 对象定义了构造函数。注意 <B>this</B> 关键字的使用，它指向当前对象。</P>
 
-<PRE><CODE>// pasta </CODE>鏄湁鍥涗釜鍙傛暟鐨勬瀯閫犲櫒銆�
+<PRE><CODE>// pasta </CODE>是有四个参数的构造器。
 <CODE>function pasta(grain, width, shape, hasEgg)</CODE>
 {
-<CODE>    // </CODE>鏄敤浠�箞绮鍋氱殑锛�
+<CODE>    // </CODE>是用什么粮食做的？
 <CODE>    this.grain = grain;</CODE>
 
-<CODE>    // </CODE>澶氬锛燂紙鏁板�锛�
+<CODE>    // </CODE>多宽？（数值）
 <CODE>    this.width = width;     </CODE>
 
-<CODE>    // </CODE>妯埅闈㈠舰鐘讹紵锛堝瓧绗︿覆锛�
+<CODE>    // </CODE>横截面形状？（字符串）
 <CODE>    this.shape = shape;   </CODE>
 
-<CODE>// </CODE>鏄惁鍔犺泲榛勶紵锛�CODE>boolean</CODE>锛�
+<CODE>// </CODE>是否加蛋黄？（<CODE>boolean</CODE>）
 <CODE>    this.hasEgg = hasEgg;  </CODE>
 <CODE>}</CODE></PRE>
 
-<P>瀹氫箟浜嗗璞℃瀯閫犲櫒鍚庯紝鐢�<B>new</B> 杩愮畻绗﹀垱寤哄璞″疄渚嬨�</P>
+<P>定义了对象构造器后，用 <B>new</B> 运算符创建对象实例。</P>
 
 <PRE><CODE>var spaghetti = new pasta("wheat", 0.2, "circle", true);
 var linguine = new pasta("wheat", 0.3, "oval", true);</CODE></PRE>
 
-<P>鍙互缁欏璞″疄渚嬫坊鍔犲睘鎬т互鏀瑰彉璇ュ疄渚嬶紝浣嗘槸鐢ㄧ浉鍚岀殑鏋勯�鍣ㄧ敓鎴愮殑鍏朵粬瀵硅薄瀹氫箟涓苟涓嶅寘鎷繖浜涘睘鎬э紝鑰屼笖闄ら潪浣犵壒鎰忔坊鍔犺繖浜涘睘鎬ч偅涔堝湪鍏朵粬瀹炰緥涓苟涓嶆樉绀哄嚭鏉ャ�濡傛灉瑕佸皢瀵硅薄鎵�湁瀹炰緥鐨勯檮鍔犲睘鎬ф樉绀哄嚭鏉ワ紝蹇呴』灏嗗畠浠坊鍔犲埌鏋勯�鍑芥暟鎴栨瀯閫犲櫒鍘熷瀷瀵硅薄锛堝師鍨嬪湪楂樼骇鏂囨。涓璁猴級涓�</P>
+<P>可以给对象实例添加属性以改变该实例，但是用相同的构造器生成的其他对象定义中并不包括这些属性，而且除非你特意添加这些属性那么在其他实例中并不显示出来。如果要将对象所有实例的附加属性显示出来，必须将它们添加到构造函数或构造器原型对象（原型在高级文档中讨论）中。</P>
 
-<PRE><CODE>// spaghetti </CODE>鐨勯檮鍔犲睘鎬с�
+<PRE><CODE>// spaghetti </CODE>的附加属性。
 <CODE>spaghetti.color = "pale straw";</CODE>
 <CODE>spaghetti.drycook = 7;</CODE>
 <CODE>spaghetti.freshcook = 0.5;</CODE>
 
 <CODE>var chowFun = new pasta("rice", 3, "flat", false); </CODE>
-<CODE>// chowFun </CODE>瀵硅薄鎴栧叾浠栫幇鏈夌殑<CODE> pasta </CODE>瀵硅薄
-<CODE>// </CODE>閮芥病鏈夋坊鍔犲埌<CODE> spaghetti </CODE>瀵硅薄
-<CODE>// </CODE>鐨勪笁涓柊灞炴�銆�
+<CODE>// chowFun </CODE>对象或其他现有的<CODE> pasta </CODE>对象
+<CODE>// </CODE>都没有添加到<CODE> spaghetti </CODE>对象
+<CODE>// </CODE>的三个新属性。
 
 
-<CODE>// </CODE>灏嗗睘鎬р�<CODE>foodgroup</CODE>鈥欏姞鍒�CODE> pasta </CODE>鍘熷瀷瀵硅薄
-<CODE>// </CODE>涓紝杩欐牱<CODE> pasta </CODE>瀵硅薄鐨勬墍鏈夊疄渚嬮兘鍙互鏈夎灞炴�锛�
-<CODE>// </CODE>鍖呮嫭閭ｄ簺宸茬粡鐢熸垚鐨勫疄渚嬨�
+<CODE>// </CODE>将属性‘<CODE>foodgroup</CODE>’加到<CODE> pasta </CODE>原型对象
+<CODE>// </CODE>中，这样<CODE> pasta </CODE>对象的所有实例都可以有该属性，
+<CODE>// </CODE>包括那些已经生成的实例。
 <CODE>pasta.prototype.foodgroup = "carbohydrates"</CODE>
 
-<CODE>// </CODE>鐜板湪<CODE> spaghetti.foodgroup</CODE>銆�CODE>chowFun.foodgroup</CODE>锛岀瓑绛�
-<CODE>// </CODE>鍧囧寘鍚�鈥�CODE>carbohydrates</CODE>鈥濄�</PRE>
+<CODE>// </CODE>现在<CODE> spaghetti.foodgroup</CODE>、<CODE>chowFun.foodgroup</CODE>，等等
+<CODE>// </CODE>均包含值“<CODE>carbohydrates</CODE>”。</PRE>
 
-<H2>鍦ㄥ畾涔変腑鍖呭惈鏂规硶</H2>
+<H2>在定义中包含方法</H2>
 
-<P>鍙互鍦ㄥ璞＄殑瀹氫箟涓寘鍚柟娉曪紙鍑芥暟锛夈�涓�鏂规硶鏄湪寮曠敤鍒瀹氫箟鐨勫嚱鏁扮殑鏋勯�鍑芥暟涓坊鍔犱竴涓睘鎬с�渚嬪锛屼笅闈㈢殑绀轰緥鎵╁厖涓婇潰瀹氫箟鐨�pasta 鏋勯�鍑芥暟浠ュ寘鍚�<B>toString</B> 鏂规硶锛岃鏂规硶灏嗗湪鏄剧ず瀵硅薄鐨勫�鏃惰璋冪敤銆�/P>
+<P>可以在对象的定义中包含方法（函数）。一种方法是在引用别处定义的函数的构造函数中添加一个属性。例如，下面的示例扩充上面定义的 pasta 构造函数以包含 <B>toString</B> 方法，该方法将在显示对象的值时被调用。</P>
 
-<PRE><CODE>// pasta </CODE>鏄湁鍥涗釜鍙傛暟鐨勬瀯閫犲櫒銆�
-<CODE>// </CODE>绗竴閮ㄥ垎涓庝笂闈㈢浉鍚屻�
+<PRE><CODE>// pasta </CODE>是有四个参数的构造器。
+<CODE>// </CODE>第一部分与上面相同。
 <CODE>function pasta(grain, width, shape, hasEgg)</CODE>
 {
-<CODE>    // </CODE>鐢ㄤ粈涔堢伯椋熷仛鐨勶紵
+<CODE>    // </CODE>用什么粮食做的？
 <CODE>    this.grain = grain;</CODE>
 
-<CODE>    // </CODE>澶氬锛燂紙鏁板�锛�
+<CODE>    // </CODE>多宽？（数值）
 <CODE>    this.width = width;     </CODE>
 
-<CODE>    // </CODE>妯埅闈㈠舰鐘讹紵锛堝瓧绗︿覆锛�
+<CODE>    // </CODE>横截面形状？（字符串）
 <CODE>    this.shape = shape;   </CODE>
 
-<CODE>    // </CODE>鏄惁鍔犺泲榛勶紵锛�CODE>boolean</CODE>锛�
+<CODE>    // </CODE>是否加蛋黄？（<CODE>boolean</CODE>）
 <CODE>    this.hasEgg = hasEgg;  </CODE>
 
-<CODE>    // </CODE>杩欓噷娣诲姞<CODE> toString </CODE>鏂规硶锛堝涓嬪畾涔夛級銆�
-<CODE>    // </CODE>娉ㄦ剰鍦ㄥ嚱鏁扮殑鍚嶇О鍚庢病鏈夊姞鍦嗘嫭鍙凤紱
-<CODE>    // </CODE>杩欎笉鏄竴涓嚱鏁拌皟鐢紝鑰屾槸
-<CODE>    // </CODE>瀵瑰嚱鏁拌嚜韬殑寮曠敤銆�
+<CODE>    // </CODE>这里添加<CODE> toString </CODE>方法（如下定义）。
+<CODE>    // </CODE>注意在函数的名称后没有加圆括号；
+<CODE>    // </CODE>这不是一个函数调用，而是
+<CODE>    // </CODE>对函数自身的引用。
 <CODE>    this.toString = pastaToString;</CODE>
 }
 
-<CODE>// </CODE>瀹為檯鐨勭敤鏉ユ樉绀�CODE> past </CODE>瀵硅薄鍐呭鐨勫嚱鏁般�<CODE> </CODE>
+<CODE>// </CODE>实际的用来显示<CODE> past </CODE>对象内容的函数。<CODE> </CODE>
 <CODE>function pastaToString()</CODE>
 <CODE>{</CODE>
-<CODE>    // </CODE>杩斿洖瀵硅薄鐨勫睘鎬с�
+<CODE>    // </CODE>返回对象的属性。
 
 <CODE>    return "Grain: " + this.grain + "\n" +</CODE>
 <CODE>        "Width: " + this.width + "\n" +
@@ -106,13 +106,13 @@ var linguine = new pasta("wheat", 0.3, "oval", true);</CODE></PRE>
 <CODE>}</CODE>
 
 <CODE>var spaghetti = new pasta("wheat", 0.2, "circle", true);</CODE>
-<CODE>// </CODE>灏嗚皟鐢�CODE> toString() </CODE>骞舵樉绀�CODE> spaghetti </CODE>瀵硅薄
-<CODE>// </CODE>鐨勫睘鎬э紙闇�<CODE>Internet </CODE>娴忚鍣級銆�
+<CODE>// </CODE>将调用<CODE> toString() </CODE>并显示<CODE> spaghetti </CODE>对象
+<CODE>// </CODE>的属性（需要<CODE>Internet </CODE>浏览器）。
 <CODE>window.alert(spaghetti);</CODE>
 </PRE>
 <!--Copyright_START-->
 <DIV CLASS="footer">
-<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 鐗堟潈鎵�湁銆備繚鐣欐墍鏈夋潈鍒┿�浣跨敤瑙勫畾銆�/a><br>
+<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 版权所有。保留所有权利。使用规定。</a><br>
 </DIV> <!--Copyright_END-->
 
 </BODY>

@@ -1,8 +1,8 @@
-锘�!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
 <HTML>
 <HEAD>
 <META HTTP-EQUIV="Content-Type" Content="text/html; charset=gb2312">
-<TITLE>鎺у埗绋嬪簭鐨勬祦绋�/TITLE>
+<TITLE>控制程序的流程</TITLE>
 <!--CSS_START-->
 <style>@import url(../html-vss/msdnie4a.css);</style>
 <link disabled rel="stylesheet" href="../html-vss/msdn_ie3.css">
@@ -15,66 +15,66 @@
 <TABLE class="banner" width="100%" CELLSPACING=0>
 <TR>
 <TD class="bannerleft" nowrap>JScript&nbsp;</TD>
-<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">璇█鍙傝�</a></TD>
+<TD class="bannerright" nowrap><a href="../html-vss/jsTOC.htm">语言参考</a></TD>
 </TR>
 </TABLE>
 <HR>
 <!--End Head-->
 
-<H1><A NAME="conditionals"></A>鎺у埗绋嬪簭鐨勬祦绋�/H1>
+<H1><A NAME="conditionals"></A>控制程序的流程</H1>
 
-<P>Jscript 鑴氭湰涓殑璇彞涓�埇鏄寜鐓у啓鐨勯『搴忔潵杩愯鐨勩�杩欑杩愯绉颁负椤哄簭杩愯锛屾槸绋嬪簭娴佺殑榛樿鏂瑰悜銆�/P>
+<P>Jscript 脚本中的语句一般是按照写的顺序来运行的。这种运行称为顺序运行，是程序流的默认方向。</P>
 
-<P>涓庨『搴忚繍琛屼笉鍚岋紝鍙︿竴绉嶈繍琛屽皢绋嬪簭娴佽浆鎹㈠埌鑴氭湰鐨勫彟澶栫殑閮ㄥ垎銆備篃灏辨槸锛屼笉鎸夐『搴忚繍琛屼笅涓�潯璇彞锛岃�鏄繍琛屽彟澶栫殑璇彞銆�/P>
+<P>与顺序运行不同，另一种运行将程序流转换到脚本的另外的部分。也就是，不按顺序运行下一条语句，而是运行另外的语句。</P>
 
-<P>瑕佷娇鑴氭湰鍙敤锛岃鎺у埗鐨勮浆鎹㈠繀椤讳互閫昏緫鏂瑰紡鎵ц銆傜▼搴忔帶鍒剁殑杞崲鏄熀浜庝竴涓�鍐冲畾鈥濓紝杩欎釜鈥滃喅瀹氣�缁撴灉鏄湡鎴栧亣锛堣繑鍥�nbsp; Boolean 鍨�<B>true </B>鎴�<B>false</B>锛夈� 鍒涘缓涓�釜琛ㄨ揪寮忥紝鐒跺悗娴嬭瘯鍏舵槸鍚︿负鐪熴�涓昏鏈変袱绉嶇▼搴忕粨鏋勫疄鐜版湰鍔熻兘銆�/P>
+<P>要使脚本可用，该控制的转换必须以逻辑方式执行。程序控制的转换是基于一个“决定”，这个“决定”结果是真或假（返回&nbsp; Boolean 型 <B>true </B>或 <B>false</B>）。 创建一个表达式，然后测试其是否为真。主要有两种程序结构实现本功能。</P>
 
-<P>绗竴绉嶆槸閫夋嫨缁撴瀯銆傜敤鏉ユ寚鏄庝袱绉嶇▼搴忔祦鏂瑰悜锛屽湪绋嬪簭涓垱寤轰竴涓氦鍙夌偣锛堝儚宀旇矾锛夈�鍦�Jscript 涓湁鍥涚閫夋嫨缁撴瀯鍙敤銆�
-
-<UL type=disc>
-	<LI>鍗曚竴閫夋嫨缁撴瀯锛�B>if</B>锛夛紝</li>
-
-	<LI>浜岃矾閫夋嫨缁撴瀯锛�B>if/else</B>锛夛紝</li>
-
-	<LI>鍐呰仈涓夊厓杩愮畻绗�<B>?:</B></li>
-
-	<LI>澶氳矾閫夋嫨缁撴瀯锛�B>switch</B>锛夈�</li>
-</UL>
-
-<P>绗簩绉嶇被鍨嬬殑绋嬪簭鎺у埗缁撴瀯鏄惊鐜粨鏋勩�浣跨敤寰幆缁撴瀯鏉ユ寚鏄庡綋鏌愪簺鏉′欢淇濇寔涓虹湡鏃惰閲嶅鐨勫姩浣溿�褰撴帶鍒惰鍙ョ殑鏉′欢寰楀埌婊¤冻鏃讹紙閫氬父鍦ㄦ煇浜涜凯浠ｇ殑鐗瑰畾鏁板瓧鍚庯級锛屾帶鍒惰烦杩囧惊鐜粨鏋勪紶閫掑埌涓嬫潯璇彞銆傚湪 Jscript 涓湁鍥涚寰幆缁撴瀯鍙敤銆�
+<P>第一种是选择结构。用来指明两种程序流方向，在程序中创建一个交叉点（像岔路）。在 Jscript 中有四种选择结构可用。
 
 <UL type=disc>
-	<LI>鍦ㄥ惊鐜殑寮�ご娴嬭瘯琛ㄨ揪寮忥紙<B>while</B>锛夛紝</li>
+	<LI>单一选择结构（<B>if</B>），</li>
 
-	<LI>鍦ㄥ惊鐜殑鏈熬娴嬭瘯琛ㄨ揪寮忥紙<B>do/while</B>锛夛紝</li>
+	<LI>二路选择结构（<B>if/else</B>），</li>
 
-	<LI>瀵瑰璞＄殑姣忎釜灞炴�閮借繘琛屾搷浣滐紙<B>for/in</B>锛夛紝</li>
+	<LI>内联三元运算符 <B>?:</B></li>
 
-	<LI>鐢辫鏁板櫒鎺у埗鐨勫惊鐜紙<B>for</B>锛夈�</li>
+	<LI>多路选择结构（<B>switch</B>）。</li>
 </UL>
 
-<P>閫氳繃宓屽鍜屽爢鏍堥�鎷┿�寰幆鎺у埗缁撴瀯锛屽彲浠ュ垱寤虹浉褰撳鏉傜殑鑴氭湰銆�/P>
+<P>第二种类型的程序控制结构是循环结构。使用循环结构来指明当某些条件保持为真时要重复的动作。当控制语句的条件得到满足时（通常在某些迭代的特定数字后），控制跳过循环结构传递到下条语句。在 Jscript 中有四种循环结构可用。
 
-<P>绗笁绉嶅舰寮忕殑缁撴瀯绋嬪簭娴佺敱鎰忓澶勭悊缁欏嚭锛屾湰鏂囨。涓嶄綔璁ㄨ銆�/P>
+<UL type=disc>
+	<LI>在循环的开头测试表达式（<B>while</B>），</li>
 
-<H2>浣跨敤鏉′欢璇彞</H2>
+	<LI>在循环的末尾测试表达式（<B>do/while</B>），</li>
 
-<P>JScript 鏀寔 <B>if</B> 鍜�<A HREF="jsstmif.htm">if...else</A> 鏉′欢璇彞銆傚湪 <B>if</B> 璇彞涓皢娴嬭瘯涓�釜鏉′欢锛屽鏋滆鏉′欢婊¤冻娴嬭瘯锛屾墽琛岀浉鍏崇殑 JScript 缂栫爜銆傚湪 <B>if...else</B> 璇彞涓紝濡傛灉鏉′欢涓嶆弧瓒虫祴璇曪紝鍒欏皢鎵ц涓嶅悓鐨勪唬鐮併�鏈�畝鍗曠殑 <B>if</B> 璇彞鏍煎紡鍙互鍦ㄤ竴琛屼腑鍐欏畬锛屼笉杩囨洿甯歌鐨勬槸澶氳鐨�<B>if</B> 鍜�<B>if...else</B> 璇彞銆�/P>
+	<LI>对对象的每个属性都进行操作（<B>for/in</B>），</li>
 
-<P>涓嬭堪绀轰緥婕旂ず浜嗕娇鐢�<B>if</B> 鍜�<B>if...else</B> 璇彞鐨勫悇绉嶅彲鑳界殑璇硶銆傜涓�釜绀轰緥婕旂ず浜嗘渶绠�崟鐨勫竷灏旀祴璇曘�褰擄紙涓斾粎褰擄級鎷彿涔嬮棿鐨勯」鐨勫�涓猴紙鎴栬�鍙寮哄埗杞崲涓猴級 <B>true</B> 鏃讹紝<B>if</B> 鍚庣画鐨勮鍙ユ垨璇彞鍧楁墠浼氳鎵ц銆�</P>
+	<LI>由计数器控制的循环（<B>for</B>）。</li>
+</UL>
 
-<PRE><CODE>// smash() </CODE>鍑芥暟鏄湪璇ヤ唬鐮佺殑鍏朵粬鍦版柟瀹氫箟鐨勩�
-<CODE>// </CODE>甯冨皵娴嬭瘯锛岀湅<CODE> newShip </CODE>鏄惁涓�CODE> true</CODE>銆�
+<P>通过嵌套和堆栈选择、循环控制结构，可以创建相当复杂的脚本。</P>
+
+<P>第三种形式的结构程序流由意外处理给出，本文档不作讨论。</P>
+
+<H2>使用条件语句</H2>
+
+<P>JScript 支持 <B>if</B> 和 <A HREF="jsstmif.htm">if...else</A> 条件语句。在 <B>if</B> 语句中将测试一个条件，如果该条件满足测试，执行相关的 JScript 编码。在 <B>if...else</B> 语句中，如果条件不满足测试，则将执行不同的代码。最简单的 <B>if</B> 语句格式可以在一行中写完，不过更常见的是多行的 <B>if</B> 和 <B>if...else</B> 语句。</P>
+
+<P>下述示例演示了使用 <B>if</B> 和 <B>if...else</B> 语句的各种可能的语法。第一个示例演示了最简单的布尔测试。当（且仅当）括号之间的项的值为（或者可被强制转换为） <B>true</B> 时，<B>if</B> 后续的语句或语句块才会被执行。 </P>
+
+<PRE><CODE>// smash() </CODE>函数是在该代码的其他地方定义的。
+<CODE>// </CODE>布尔测试，看<CODE> newShip </CODE>是否为<CODE> true</CODE>。
 <CODE>if (newShip)</CODE>
 &nbsp;&nbsp;&nbsp;<CODE>smash(champagneBottle,bow); </CODE>
 
-<CODE>// </CODE>鍦ㄦ湰绀轰緥涓紝闄ら潪涓や釜鏉′欢閮戒负鐪燂紝鍚﹀垯璇ユ祴璇曞皢涓嶄細琚弧瓒炽�
+<CODE>// </CODE>在本示例中，除非两个条件都为真，否则该测试将不会被满足。
 <CODE>if (rind.color == "deep yellow " &amp;&amp; rind.texture == "large and small wrinkles")</CODE>
 <CODE>{</CODE>
 &nbsp;&nbsp;&nbsp;<CODE>theResponse = ("Is it a Crenshaw melon?");</CODE>
 <CODE>}</CODE>
 
-<CODE>// </CODE>鍦ㄦ湰绀轰緥涓紝鍙浠讳綍涓�釜鏉′欢涓虹湡锛屽垯娴嬭瘯鍗充細婊¤冻銆�
+<CODE>// </CODE>在本示例中，只要任何一个条件为真，则测试即会满足。
 <CODE>var theReaction = "";</CODE>
 <CODE>if ((dayOfWeek == "Saturday") || (dayOfWeek == "Sunday"))</CODE>
 <CODE>{</CODE>
@@ -85,88 +85,88 @@
 <CODE>&nbsp;&nbsp;&nbsp;theReaction = ("Hi ho, hi ho, it's off to work I go!");</CODE>
 <CODE>}</CODE></PRE>
 
-<H2>鏉′欢杩愮畻绗�/H2>
+<H2>条件运算符</H2>
 
-<P>JScript 涔熸敮鎸侀殣寮忕殑鏉′欢鏍煎紡銆傝鏍煎紡鍦ㄨ娴嬭瘯鐨勬潯浠跺悗浣跨敤涓�釜闂彿锛堣�涓嶆槸鍦ㄦ潯浠跺墠鐨�<B>if</B> 锛夈�瀹冧篃鎸囧畾涓や釜鍙�椤癸紝涓�釜鍦ㄦ弧瓒虫潯浠舵椂浣跨敤锛屽彟涓�釜鍦ㄦ潯浠朵笉婊¤冻鏃朵娇鐢ㄣ�杩欎袱涓�鎷╅」涔嬮棿蹇呴』鐢ㄤ竴涓啋鍙烽殧寮��</P>
+<P>JScript 也支持隐式的条件格式。该格式在要测试的条件后使用一个问号（而不是在条件前的 <B>if</B> ）。它也指定两个可选项，一个在满足条件时使用，另一个在条件不满足时使用。这两个选择项之间必须用一个冒号隔开。</P>
 
 <PRE><CODE>var hours = "";
 
-// </CODE>涓嬮潰鐨勪唬鐮佹寚瀹�CODE> hours </CODE>鏄寘鍚�CODE> theHour </CODE>鐨勫唴瀹癸紝
-<CODE>// </CODE>杩樻槸鍖呭惈<CODE> theHour - 12 </CODE>鐨勫唴瀹广�
+// </CODE>下面的代码指定<CODE> hours </CODE>是包含<CODE> theHour </CODE>的内容，
+<CODE>// </CODE>还是包含<CODE> theHour - 12 </CODE>的内容。
 
 <CODE>hours += (theHour &gt;= 12) ? " PM" : " AM";</CODE></PRE>
 
-<P>濡傛灉瑕佷竴璧锋祴璇曞涓潯浠讹紝骞朵笖鐭ラ亾鏌愪釜鏉′欢姣斿叾浠栨潯浠舵洿鍙兘婊¤冻鎴栦笉婊¤冻娴嬭瘯锛屽彲浠ヤ娇鐢ㄧО涓衡�鐭矾璁＄畻鈥濈殑鐗规�鏉ュ姞閫熻剼鏈殑杩愯閫熷害銆傚綋 JScript 璁＄畻閫昏緫琛ㄨ揪寮忔椂锛屽彧璁＄畻瑕佸緱鍒扮粨鏋滄墍闇�殑瀛愯〃杈惧紡銆�/P>
+<P>如果要一起测试多个条件，并且知道某个条件比其他条件更可能满足或不满足测试，可以使用称为“短路计算”的特性来加速脚本的运行速度。当 JScript 计算逻辑表达式时，只计算要得到结果所需的子表达式。</P>
 
-<P>渚嬪锛屽鏋滄湁涓�釜鈥滀笌鈥濊〃杈惧紡锛屽 ((x == 123) &amp;&amp; (y == 42))锛孞script 棣栧厛妫�煡 x 鏄惁涓�123銆傚鏋滀笉鏄紝鍗充娇 y 绛変簬 42锛屾暣涓〃杈惧紡鐨勫�涔熶笉鍙兘涓�true銆傚洜姝わ紝骞朵笉瀵�y 浣滄祴璇曪紝Jscript 杩斿洖 <B>false</B> 鍊笺�</P>
+<P>例如，如果有一个“与”表达式，如 ((x == 123) &amp;&amp; (y == 42))，Jscript 首先检查 x 是否为 123。如果不是，即使 y 等于 42，整个表达式的值也不可能为 true。因此，并不对 y 作测试，Jscript 返回 <B>false</B> 值。</P>
 
-<P>绫讳技鍦帮紝濡傛灉澶氫釜鏉′欢涓彧瑕佹湁涓�釜涓虹湡锛堜娇鐢�|| 杩愮畻绗︼級锛屽垯褰撲换浣曚竴涓潯浠舵弧瓒宠娴嬭瘯鏃舵祴璇曞垯鍋滄銆傚鏋滆娴嬭瘯鐨勬潯浠跺寘鎷嚱鏁拌皟鐢ㄦ垨鍏朵粬澶嶅悎琛ㄨ揪寮忥紝杩欑澶勭悊鏂瑰紡灏辨湁鏁堛�鍑轰簬姝ょ鎯虫硶锛屽啓 OR 琛ㄨ揪寮忔椂锛屽厛鍐欐渶鏈夊彲鑳戒负 <B>true</B> 鐨勬潯浠躲�鍐�AND 琛ㄨ揪寮忔椂锛屽厛鍐欐渶鏈夊彲鑳戒负 <B>false</B> 鐨勬潯浠躲�</P>
+<P>类似地，如果多个条件中只要有一个为真（使用 || 运算符），则当任何一个条件满足该测试时测试则停止。如果要测试的条件包括函数调用或其他复合表达式，这种处理方式就有效。出于此种想法，写 OR 表达式时，先写最有可能为 <B>true</B> 的条件。写 AND 表达式时，先写最有可能为 <B>false</B> 的条件。</P>
 
-<P>浠ヨ繖绉嶆柟寮忚璁¤剼鏈殑濂藉鐨勪竴涓ず渚嬫槸锛氬湪涓嬩緥涓鏋�<B>runfirst()</B> 杩斿洖 0 鎴�<B>false</B>锛�鍒欎笉浼氳繍琛�<B>runsecond()</B>銆�</P>
+<P>以这种方式设计脚本的好处的一个示例是：在下例中如果 <B>runfirst()</B> 返回 0 或 <B>false</B>， 则不会运行 <B>runsecond()</B>。 </P>
 
 <PRE><CODE>if ((runfirst() == 0) || (runsecond() == 0)) {
-    // </CODE>鑻ュ共浠ｇ爜銆�
+    // </CODE>若干代码。
 }</PRE>
 
-<H2>浣跨敤寰幆</H2>
+<H2>使用循环</H2>
 
-<P>鏈夊绉嶆柟寮忔潵閲嶅鎵ц涓�潯璇彞鎴栬鍙ュ潡銆傞�甯搁噸澶嶆墽琛岃绉颁负<I>寰幆</I>鎴�I>閲嶅</I>銆傞噸澶嶅彧鏄惊鐜殑涓�釜杩愯銆傚吀鍨嬫儏鍐垫槸鐢ㄤ竴涓彉閲忔祴璇曟潵杩涜鎺у埗锛屾瘡鎵ц涓�寰幆鍙橀噺鐨勫彇鍊奸兘浼氭洿鏀广�JScript 鏀寔鍥涚寰幆锛�<A HREF="jsstmfor.htm">for</A> 寰幆銆�<A HREF="jsstmforin.htm">for...in</A> 寰幆銆�<A HREF="jsstmwhile.htm">while</A> 寰幆銆�<A HREF="jsstmdowhile.htm">do...while</A> 寰幆銆�/P>
+<P>有多种方式来重复执行一条语句或语句块。通常重复执行被称为<I>循环</I>或<I>重复</I>。重复只是循环的一个运行。典型情况是用一个变量测试来进行控制，每执行一次循环变量的取值都会更改。JScript 支持四种循环： <A HREF="jsstmfor.htm">for</A> 循环、 <A HREF="jsstmforin.htm">for...in</A> 循环、 <A HREF="jsstmwhile.htm">while</A> 循环、 <A HREF="jsstmdowhile.htm">do...while</A> 循环。</P>
 
-<H2>浣跨敤 for 寰幆</H2>
+<H2>使用 for 循环</H2>
 
-<P><B>for</B> 璇彞鎸囧畾浜嗕竴涓鏁板櫒鍙橀噺锛屼竴涓祴璇曟潯浠讹紝浠ュ強鏇存柊璇ヨ鏁板櫒鐨勬搷浣溿�鍦ㄦ瘡娆″惊鐜殑閲嶅涔嬪墠锛岄兘灏嗘祴璇曡鏉′欢銆傚鏋滄祴璇曟垚鍔燂紝灏嗚繍琛屽惊鐜腑鐨勪唬鐮併�濡傛灉娴嬭瘯涓嶆垚鍔燂紝涓嶈繍寰幆涓殑浠ｇ爜锛岀▼搴忕户缁繍琛岀揣璺熷湪寰幆鍚庣殑绗竴琛屼唬鐮併�鍦ㄦ墽琛岃寰幆鍚庯紝璁＄畻鏈哄彉閲忓皢鍦ㄤ笅涓�寰幆涔嬪墠琚洿鏂般�</P>
+<P><B>for</B> 语句指定了一个计数器变量，一个测试条件，以及更新该计数器的操作。在每次循环的重复之前，都将测试该条件。如果测试成功，将运行循环中的代码。如果测试不成功，不运循环中的代码，程序继续运行紧跟在循环后的第一行代码。在执行该循环后，计算机变量将在下一次循环之前被更新。</P>
 
-<P>濡傛灉寰幆鏉′欢姘镐笉浼氭弧瓒筹紝鍒欎笉鎵ц璇ュ惊鐜�濡傛灉娴嬭瘯鏉′欢濮嬬粓婊¤冻锛屽垯灏嗗鑷存棤闄愬惊鐜�鍦ㄦ湁浜涙儏鍐典笅锛屽墠鑰呭彲鑳芥槸鍚堜箮闇�鐨勶紝鑰屽悗鑰呭嚑涔庢病鏈夌敤澶勶紝鍥犳鍦ㄧ紪鍐欏惊鐜潯浠舵椂涓�畾瑕佹敞鎰忋�</P>
+<P>如果循环条件永不会满足，则不执行该循环。如果测试条件始终满足，则将导致无限循环。在有些情况下，前者可能是合乎需要的，而后者几乎没有用处，因此在编写循环条件时一定要注意。</P>
 
 <PRE><CODE>/*
-</CODE>鏇存柊琛ㄨ揪寮�CODE> </CODE>锛堜笅渚嬩腑鐨�CODE> "icount++"</CODE>锛夊皢鍦ㄥ惊鐜粨鏉熸椂琚墽琛岋紝鍗冲湪鏋勬垚寰幆涓讳綋鐨勮鍙ュ潡琚墽琛屽悗锛屽湪娴嬭瘯鏉′欢涔嬪墠銆�
+</CODE>更新表达式<CODE> </CODE>（下例中的<CODE> "icount++"</CODE>）将在循环结束时被执行，即在构成循环主体的语句块被执行后，在测试条件之前。
 <CODE>*/</CODE>
 
-<CODE>var howFar = 10;  // </CODE>灏嗗惊鐜鏁伴檺鍒朵负<CODE> 10</CODE>銆�
+<CODE>var howFar = 10;  // </CODE>将循环次数限制为<CODE> 10</CODE>。
 
-<CODE>var sum = new Array(howFar);  // </CODE>鍒涘缓涓�釜绉颁负<CODE> sum </CODE>骞跺叿鏈�CODE> 10 </CODE>涓垚鍛樼殑鏁扮粍锛岃繖<CODE> 10 </CODE>涓垚鍛樹粠<CODE> 0 </CODE>鍒�CODE> 9</CODE>銆�
+<CODE>var sum = new Array(howFar);  // </CODE>创建一个称为<CODE> sum </CODE>并具有<CODE> 10 </CODE>个成员的数组，这<CODE> 10 </CODE>个成员从<CODE> 0 </CODE>到<CODE> 9</CODE>。
 <CODE>var theSum = 0;</CODE>
 <CODE>sum[0] = 0;</CODE>
 
-<CODE>for(var icount = 0; icount &lt; howFar; icount++)  {        // </CODE>鍦ㄦ湰渚嬩腑灏嗕粠<CODE> 0 </CODE>鍒�CODE> 9 </CODE>杩涜璁℃暟銆�
+<CODE>for(var icount = 0; icount &lt; howFar; icount++)  {        // </CODE>在本例中将从<CODE> 0 </CODE>到<CODE> 9 </CODE>进行计数。
 <CODE>theSum += icount;</CODE>
 <CODE>sum[icount] = theSum;</CODE>
 <CODE>}</CODE>
 
 <CODE>var newSum = 0;</CODE>
-<CODE>for(var icount = 0; icount &gt; howFar; icount++)  {        // </CODE>璇ュ惊鐜牴鏈笉浼氳鎵ц锛屽洜涓�CODE> icount </CODE>涓嶅ぇ浜�CODE> howFar</CODE>銆�
+<CODE>for(var icount = 0; icount &gt; howFar; icount++)  {        // </CODE>该循环根本不会被执行，因为<CODE> icount </CODE>不大于<CODE> howFar</CODE>。
 <CODE>newSum += icount;</CODE>
 <CODE>}</CODE>
 
 <CODE>var sum = 0;</CODE>
-<CODE>for(var icount = 0; icount &gt;= 0; icount++)  {        // </CODE>杩欐槸涓�釜鏃犻檺寰幆銆�
+<CODE>for(var icount = 0; icount &gt;= 0; icount++)  {        // </CODE>这是一个无限循环。
 <CODE>sum += icount;</CODE>
 <CODE>}</CODE></PRE>
 
-<H2>浣跨敤 for...in 寰幆</H2>
+<H2>使用 for...in 循环</H2>
 
-<P>JScript 鎻愪緵浜嗕竴绉嶇壒鍒殑寰幆鏂瑰紡鏉ラ亶鍘嗕竴涓�A HREF="objects.htm">瀵硅薄</A>鐨勬墍鏈夌敤鎴峰畾涔夌殑灞炴�鎴栬�涓�釜鏁扮粍鐨勬墍鏈夊厓绱犮�<B>for...in</B> 寰幆涓殑寰幆璁℃暟鍣ㄦ槸涓�釜瀛楃涓诧紝鑰屼笉鏄暟瀛椼�瀹冨寘鍚綋鍓嶅睘鎬х殑鍚嶇О鎴栬�褰撳墠鏁扮粍鍏冪礌鐨勪笅鏍囥�</P>
+<P>JScript 提供了一种特别的循环方式来遍历一个<A HREF="objects.htm">对象</A>的所有用户定义的属性或者一个数组的所有元素。<B>for...in</B> 循环中的循环计数器是一个字符串，而不是数字。它包含当前属性的名称或者当前数组元素的下标。</P>
 
-<P>涓嬮潰鐨勪唬鐮佽寖渚嬪簲鍦�Internet 娴忚鍣ㄤ腑杩愯锛屽洜涓哄畠浣跨敤 <B>alert</B> 鏂规硶锛岃鏂规硶涓嶅睘浜�Jscript銆�/P>
+<P>下面的代码范例应在 Internet 浏览器中运行，因为它使用 <B>alert</B> 方法，该方法不属于 Jscript。</P>
 
-<PRE><CODE>// </CODE>鍒涘缓鍏锋湁鏌愪簺灞炴�鐨勫璞�
+<PRE><CODE>// </CODE>创建具有某些属性的对象
 <CODE>var myObject = new Object();</CODE>
 <CODE>myObject.name = "James";</CODE>
 <CODE>myObject.age = "22";</CODE>
 <CODE>myObject.phone = "555 1234";</CODE>
 
-<CODE>// </CODE>鏋氫妇锛堝惊鐜級瀵硅薄鐨勬墍鏈夊睘鎬�
+<CODE>// </CODE>枚举（循环）对象的所有属性
 <CODE>for (prop in myObject)</CODE>
 <CODE>{</CODE>
-<CODE>    // </CODE>鏄剧ず<CODE> "The property 'name' is James"</CODE>锛岀瓑绛夈�
+<CODE>    // </CODE>显示<CODE> "The property 'name' is James"</CODE>，等等。
 <CODE>    window.alert("The property '" + prop + "' is " + myObject[prop]);</CODE>
 <CODE>}</CODE></PRE>
 
-<P>灏界 <B>for...in</B> 寰幆鐪嬭捣鏉ュ儚 VBScript 鐨�<B>For Each...Next</B> 寰幆锛屽叾瀹炲苟涓嶄竴鏍枫�JScript 鐨�<B>for...in 寰幆</B>閲嶅Jscript 瀵硅薄鎵�湁鐨勫睘鎬с�VBScript 鐨�<B>For Each...Next </B>寰幆閲嶅闆嗗悎涓殑鎵�湁椤圭洰銆傝寰幆 JScript 涓殑鎵�湁闆嗗悎锛岄渶瑕佺敤 <B>Enumerator</B> 瀵硅薄銆傚敖绠℃煇浜涘璞★紙鍍�Internet 娴忚鍣ㄤ腑鐨勯偅浜涳級鏀寔 VBScript 鐨�<B>For Each...Next </B>鍜�Jscript 鐨�<B>for...in </B>寰幆锛屼絾澶氭暟瀵硅薄骞朵笉閮芥敮鎸併�</P>
+<P>尽管 <B>for...in</B> 循环看起来像 VBScript 的 <B>For Each...Next</B> 循环，其实并不一样。JScript 的 <B>for...in 循环</B>重复Jscript 对象所有的属性。VBScript 的 <B>For Each...Next </B>循环重复集合中的所有项目。要循环 JScript 中的所有集合，需要用 <B>Enumerator</B> 对象。尽管某些对象（像 Internet 浏览器中的那些）支持 VBScript 的 <B>For Each...Next </B>和 Jscript 的 <B>for...in </B>循环，但多数对象并不都支持。</P>
 
-<H2>浣跨敤 while 寰幆</H2>
+<H2>使用 while 循环</H2>
 
-<P><B>while</B> 寰幆鐩镐技浜�<B>for</B> 寰幆銆傚叾涓嶅悓涔嬪鏄�<B>while</B> 寰幆娌℃湁鍐呯疆鐨勮鏁板櫒鎴栨洿鏂拌〃杈惧紡銆傚鏋滃笇鏈涙帶鍒惰鍙ユ垨璇彞鍧楃殑寰幆鎵ц锛岄渶瑕佷笉鍙槸鈥滆繍琛岃浠ｇ爜 n 娆♀�锛岃�鏄洿澶嶆潅鐨勮鍒欙紝鐢�<B>while</B> 寰幆銆備笅闈㈢殑绀轰緥浣跨敤 Internet 娴忚鍣ㄥ璞℃ā鍨嬪拰 <B>while</B> 寰幆鏉ヨ闂敤鎴蜂竴涓畝鍗曠殑闂銆�/P>
+<P><B>while</B> 循环相似于 <B>for</B> 循环。其不同之处是 <B>while</B> 循环没有内置的计数器或更新表达式。如果希望控制语句或语句块的循环执行，需要不只是“运行该代码 n 次”，而是更复杂的规则，用 <B>while</B> 循环。下面的示例使用 Internet 浏览器对象模型和 <B>while</B> 循环来询问用户一个简单的问题。</P>
 
 <PRE><CODE>var x = 0;
 while ((x != 42) &amp;&amp; (x != null))
@@ -179,9 +179,9 @@ if (x == null)
 else
     window.alert("Yep - it's the Ultimate Answer!");</CODE></PRE>
 
-<P class=indent><B>娉ㄦ剰&nbsp;&nbsp;&nbsp;</B>鐢变簬 <B>while</B> 寰幆娌℃湁鏄惧紡鐨勫唴缃鏁板櫒鍙橀噺锛屽洜姝ゆ瘮鍏朵粬绫诲瀷鐨勫惊鐜洿瀹规槗浜х敓鏃犻檺寰幆銆傛澶栵紝鐢变簬涓嶆槗鍙戠幇寰幆鏉′欢鏄湪浣曟椂浣曞湴琚洿鏂扮殑锛屽緢瀹规槗缂栧啓涓�釜瀹為檯涓婁粠涓嶆洿鏂版潯浠剁殑 <B>while</B> 寰幆銆傚洜姝ゅ湪缂栧啓 <B>while</B> 寰幆鏃跺簲鐗瑰埆灏忓績銆�/P>
+<P class=indent><B>注意&nbsp;&nbsp;&nbsp;</B>由于 <B>while</B> 循环没有显式的内置计数器变量，因此比其他类型的循环更容易产生无限循环。此外，由于不易发现循环条件是在何时何地被更新的，很容易编写一个实际上从不更新条件的 <B>while</B> 循环。因此在编写 <B>while</B> 循环时应特别小心。</P>
 
-<P>鍚屼笂闈㈡墍鎻愬埌鐨勶紝鍦�JScript 涓繕鏈�<B>do...while </B>寰幆涓�while 寰幆鐩镐技锛屼笉鍚屽鍦ㄤ簬瀹冩�鏄嚦灏戣繍琛屼竴娆★紝鍥犱负鏄湪寰幆鐨勬湯灏炬鏌ユ潯浠讹紝鑰屼笉鏄湪寮�ご銆備緥濡傦紝涓婇潰鐨勫惊鐜彲浠ヨ鏀瑰啓涓猴細</P>
+<P>同上面所提到的，在 JScript 中还有 <B>do...while </B>循环与 while 循环相似，不同处在于它总是至少运行一次，因为是在循环的末尾检查条件，而不是在开头。例如，上面的循环可以被改写为：</P>
 
 <PRE><CODE>var x = 0;
 do
@@ -194,27 +194,27 @@ if (x == null)
 else
     window.alert("Yep - it's the Ultimate Answer!");</CODE></PRE>
 
-<H2>浣跨敤 break 鍜�continue 璇彞</H2>
+<H2>使用 break 和 continue 语句</H2>
 
-<P>鍦�Microsoft Jscript 涓綋鏌愪簺鏉′欢寰楀埌婊¤冻鏃讹紝鐢�<A HREF="jsstmbreak.htm">break</A> 璇彞鏉ヤ腑鏂竴涓惊鐜殑杩愯銆傦紙璇锋敞鎰忥紝涔熺敤 <B>break</B> 璇彞閫�嚭涓�釜 <B>switch </B>鍧椼�锛夈�濡傛灉鏄竴涓�<B>for</B> 鎴栬� <B>for...in </B>寰幆锛屽湪鏇存柊璁℃暟鍣ㄥ彉閲忔椂浣跨敤 <A HREF="jsstmcontinue.htm">continue</A> 璇彞瓒婅繃浣欎笅鐨勪唬鐮佸潡鑰岀洿鎺ヨ烦鍒颁笅涓�釜寰幆涓�</P>
+<P>在 Microsoft Jscript 中当某些条件得到满足时，用 <A HREF="jsstmbreak.htm">break</A> 语句来中断一个循环的运行。（请注意，也用 <B>break</B> 语句退出一个 <B>switch </B>块。）。如果是一个 <B>for</B> 或者 <B>for...in </B>循环，在更新计数器变量时使用 <A HREF="jsstmcontinue.htm">continue</A> 语句越过余下的代码块而直接跳到下一个循环中。</P>
 
-<P>涓嬮潰鐨勪緥瀛愬熀浜庡墠闈㈢殑绀轰緥鐢�<B>break </B>鍜�<B>continue </B>璇彞鎺у埗寰幆銆�/P>
+<P>下面的例子基于前面的示例用 <B>break </B>和 <B>continue </B>语句控制循环。</P>
 
 <PRE><CODE>var x = 0;
 do
 {
     x = window.prompt("What is my favourite number?", x);
 
-    // </CODE>鍒ゆ柇鐢ㄦ埛鏄惁閫夋嫨鍙栨秷锛熷鏋滄槸锛岄�鍑哄惊鐜�
+    // </CODE>判断用户是否选择取消？如果是，退出循环。
 <CODE>    if (x == null)</CODE>
 <CODE>        break;</CODE>
 
-<CODE>    // </CODE>鏄惁杈撳叆涓�釜鏁帮紵
-<CODE>    // </CODE>濡傛灉鏄垯鏃犻渶瑕佹眰杈撳叆涓�釜鏁般�
+<CODE>    // </CODE>是否输入一个数？
+<CODE>    // </CODE>如果是则无需要求输入一个数。
 <CODE>    if (Number(x) == x)</CODE>
 <CODE>        continue;</CODE>
 
-<CODE>    //  </CODE>瑕佹眰鐢ㄦ埛鍙緭鍏ユ暟瀛椼�
+<CODE>    //  </CODE>要求用户只输入数字。
 <CODE>    window.alert("Please only enter in numbers!");</CODE>
 
 <CODE>} while (x != 42)</CODE>
@@ -225,7 +225,7 @@ do
 <CODE>    window.alert("Yep - it's the Ultimate Answer!");</CODE></PRE>
 <!--Copyright_START-->
 <DIV CLASS="footer">
-<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 鐗堟潈鎵�湁銆備繚鐣欐墍鏈夋潈鍒┿�浣跨敤瑙勫畾銆�/a><br>
+<HR><a href="jscopy.htm">&copy; 2000 Microsoft Corporation 版权所有。保留所有权利。使用规定。</a><br>
 </DIV> <!--Copyright_END-->
 
 </BODY>

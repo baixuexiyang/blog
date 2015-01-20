@@ -2,7 +2,7 @@
 
 echo *********Running Node Server*********
 echo Try Stoping Node...
-taskkill /F /IM node.exe 
+taskkill /F /IM node.exe
 node index
 
 @ echo.
