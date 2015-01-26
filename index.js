@@ -8,14 +8,14 @@ var express = require('express'),
     path = require('path'),
     favicon = require('static-favicon'),
     // logger = require('morgan'),
-    
+
     cookieParser = require('cookie-parser'),
     session = require('express-session'),
     RedisStore = require('connect-redis')(session),
     redis = require('redis'),
     // redisCfg = require('./config/redis'),
     // redisClient = redis.createClient(redisCfg.port, redisCfg.host),
-    
+
     bodyParser = require('body-parser'),
     compress = require('compression'),
     less = require('less-middleware'),
@@ -127,7 +127,7 @@ if (cluster.isMaster) {
 
     // watch只需要执行一次，所以放在主进程中
     require('./helper/watch').init(config);
-    
+
 } else {
     server = http.createServer(app);
     io = socketio.listen(server);

@@ -14,6 +14,12 @@ define("main", [], function(require, exports, module) {
             break;
         case 'index':
             require.async('./app/index.js');
+            break;
+        case 'admin-list':
+            require.async('./app/admin-list.js');
+            break;
+        default:
+            break;
     }
 
     (function() {
