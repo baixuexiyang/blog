@@ -1,7 +1,7 @@
 /**
- * 描述: Node 服务监控
- * 作者: 李洪波
- * 时间：2014年5月
+ * Node 服务监控
+ * @since 2015-01-26
+ * @author xiyangbaixue
  */
 
 var forever = require('forever-monitor'),
