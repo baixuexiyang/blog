@@ -18,6 +18,9 @@ define("main", [], function(require, exports, module) {
         case 'admin-list':
             require.async('./app/admin-list.js');
             break;
+        case 'admin-edit':
+            require.async('./app/admin-edit.js');
+            break;
         default:
             break;
     }

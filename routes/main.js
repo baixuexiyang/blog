@@ -7,7 +7,6 @@ module.exports = function (app) {
     app.get('/', function(req, res) {
         res.render('main/index.html');
         res.end();
-
     });
 
     app.get('/admin', function(req, res) {
@@ -25,6 +24,12 @@ module.exports = function (app) {
 
     app.get('/list', function(req, res) {
         res.render('admin/list.html');
+        res.end();
+    });
+
+    app.post(/\/edit\?id=\d+/, function(req, res) {
+        console.log(111111111111111111111111111111111111111111111);
+        res.render('admin/edit.html');
         res.end();
     });
 
