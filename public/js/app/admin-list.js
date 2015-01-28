@@ -4,15 +4,15 @@
  * @author xiyangbaixue
  */
 define(function(require, exports, module) {
+
     "use strict";
 
     var list = {
         init: function() {
             $('.edit').click(function() {
-                var api = snow.apiUrl + '/edit?id=' + $(this).data('id');
+                var api = snow.apiUrl + '/edit/' + $(this).data('id');
                 $.ajax({
                     url: api,
-                    type: 'post'
                 })
                 .done(function(res) {
                     

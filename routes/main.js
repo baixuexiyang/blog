@@ -27,10 +27,16 @@ module.exports = function (app) {
         res.end();
     });
 
-    app.post(/\/edit\?id=\d+/, function(req, res) {
-        console.log(111111111111111111111111111111111111111111111);
-        res.render('admin/edit.html');
+    app.get('/edit/:id', function(req, res) {
+        console.log(req.params.id);
+        // res.set('Content-type', 'application/html');
+        res.render('/admin/edit.html');
         res.end();
     });
+
+    /*app.get('/edit', function(req, res) {
+        res.render('admin/edit.html');
+        res.end();
+    });*/
 
 };

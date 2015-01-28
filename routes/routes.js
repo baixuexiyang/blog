@@ -3,7 +3,7 @@ var main = require('../controllers/index'), mockup = require('../controllers/moc
  * 路由，含错误路由
  * @param {Object} app Server对象
  * @return {void}
- * @author luoweiping
+ * @author xiyangbaixue
  * @version 1.4.0(2014-04-28)
  * @since 0.1.0(2014-03-17)
  */
@@ -31,6 +31,7 @@ module.exports = function (app) {
         res.render('javascript.html');
         res.end();
     });
+    
     // app.get(/css3.html/, function(req, res, nect) {
     //     res.render('css3.html');
     //     res.end();
@@ -40,7 +41,7 @@ module.exports = function (app) {
     //匹配mockup/?q=xxx
     app.post('/mockup', mockup.sendData);
     app.get('/mockup', mockup.sendData);
-    app.get(/\/([\w\W]+)(\.[shtml|html])?/i, main.getHtml);
+    // app.get(/\/([\w\W]+)(\.[shtml|html])?/i, main.getHtml);
     app.get(/\/([\w\-]+\.php)/i, main.getPhp);
     app.get('/build', main.build);
     app.get('/archive', main.listZip);
