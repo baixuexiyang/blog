@@ -107,6 +107,7 @@ app.use(express.static(path.join(__dirname, 'views/javascript')));
 
 // 主路由处理，包括首页、404、管理页
 main(app);
+
 // 子路由
 routes(app);
 

@@ -4,11 +4,19 @@ module.exports = function (app) {
     'use strict';
     //@formatter:on
 
+    // 根路由
     app.get('/', function(req, res) {
         res.render('main/index.html');
         res.end();
     });
 
+    // 首页路由
+    app.get('/handlerbook.html', function(req, res) {
+        res.render('handlerbook.html');
+        res.end();
+    });
+
+    // 后台管理路由
     app.get('/admin', function(req, res) {
         res.render('admin/login.html');
         res.end();
@@ -23,20 +31,14 @@ module.exports = function (app) {
     });
 
     app.get('/list', function(req, res) {
-        res.render('admin/list.html');
+        res.render('admin/list.html',{id:123});
         res.end();
     });
 
     app.get('/edit/:id', function(req, res) {
-        console.log(req.params.id);
-        // res.set('Content-type', 'application/html');
-        res.render('/admin/edit.html');
+        res.render('admin/edit.html');
         res.end();
     });
 
-    /*app.get('/edit', function(req, res) {
-        res.render('admin/edit.html');
-        res.end();
-    });*/
 
 };
