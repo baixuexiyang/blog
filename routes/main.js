@@ -6,13 +6,29 @@ module.exports = function (app) {
 
     // 根路由
     app.get('/', function(req, res) {
-        res.render('main/index.html');
+        res.render('index.html');
         res.end();
     });
 
     // 首页路由
     app.get('/handlerbook.html', function(req, res) {
         res.render('handlerbook.html');
+        res.end();
+    });
+
+    app.get('/blog/blog.html', function(req, res) {
+        res.render('blog/blog.html');
+        res.end();
+    });
+
+    app.get('/infor.html', function(req, res) {
+        res.render('infor.html');
+        res.end();
+    });
+
+    // 博客路由
+    app.get('/detail/:id', function(req, res) {
+        res.render('blog/detail.html');
         res.end();
     });
 

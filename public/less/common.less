@@ -54,15 +54,20 @@
 }
 
 // 浮动
-.lf {
+.fl {
     float: left;
 }
-.rt {
-    float: left;
+.fr {
+    float: right;
 }
 .clr {
     clear: both;
     *zoom: 1;/* for IE 6-7 */
+}
+.pclr {
+    display:block;
+    zoom:1;
+    overflow:hidden;
 }
 
 // 文本对齐
@@ -90,3 +95,15 @@ a {
     text-decoration: none;
     color: black;
 }
+
+body {
+    background: #F5F5F5 url(../images/pattern.png);
+}
+
+// 改变字体颜色
+::selection { background: rgba(88, 144, 247, .8);color: #fff;}
+::-moz-selection { background: rgba(88, 144, 247, .8);color: #fff;}
+::-webkit-selection { background: rgba(88, 144, 247, .8);color: #fff;}
+
+
+

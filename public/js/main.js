@@ -21,6 +21,8 @@ define("main", [], function(require, exports, module) {
         case 'admin-edit':
             require.async('./app/admin-edit.js');
             break;
+        case 'article-list':
+            require.async('./app/article-list.js')
         default:
             break;
     }
@@ -29,5 +31,12 @@ define("main", [], function(require, exports, module) {
         window.snow = {
             apiUrl : 'http://127.0.0.1:3001'
         };
+
+        // placeholder
+        $('[placeholder]').placeholder();
+
+        // nicescroll
+
+
     })();
 });
