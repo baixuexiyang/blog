@@ -41,6 +41,7 @@
     .article-list {
       width: 900px;
       border-right: 3px solid #e7e7e7;
+      background-color: #fff;
       ul {
         margin: 30px 20px 0 50px;
         li {
@@ -112,17 +113,38 @@
     .article-detail {
       width: 900px;
       margin: 0 auto;
-      margin-top: 20px;
+      padding: 20px 10px;
+      // padding-top: 20px;
+      background-color: #FFF;
       h2 {
         padding: 10px;
+        color: #00b7e9;
       }
       .sub-title {
         text-align: right;
         width: 100%;
+        color: #ccc;
         padding-bottom: 5px;
-        border-bottom: 1px solid #C0BEBE;
+        border-bottom: 1px dashed #ccc;
         margin-bottom: 20px;
       }
+      .scrollup {
+        position: fixed;
+        bottom: 50px;
+        right: 15px;
+        cursor: pointer;
+        z-index: 999999;
+        display: none;
+        opacity: 1;
+        width: 50px;
+        height: 50px;
+        overflow: hidden;
+        text-indent: -999em;
+        background: url(/images/scrollup.png) no-repeat center;
+      }
+    }
+    // 文档详细页底部
+    .article-footer {
       .footer {
         margin-top: 20px;
         padding: 20px 10px;
@@ -157,6 +179,146 @@
 
 }
 
+// 后台管理页
+#admin {
+  border-top: 3px solid #6B86B3;
+  border-bottom: 3px solid #6B86B3;
+  height: 80px;
+  & > .fl {
+    font-size: 30px;
+    line-height: 80px;
+  }
+}
+
+// 分页
+.pagination {
+  .fr;
+  margin: 20px;
+  span {
+    display: inline-block;
+    // padding: 3px;
+    height: 18px;
+    line-height: 18px;
+    border: 1px solid #9aafe5;
+    color: #075DB3;
+    margin-right: 5px;
+    a {
+      color: #075DB3;
+    }
+  }
+  & > a {
+    display: inline-block;
+    // padding: 3px;
+    width: 45px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 18px;
+    text-align: center;
+    margin-right: 5px;
+    border: 1px solid #9aafe5;
+    color: #075DB3;
+  }
+  .active {
+    background-color: #075DB3;
+    color: #fff;
+  }
+}
+
+
+#handbooks {
+  .handlerbook {
+    margin-left: 150px;
+    ul {
+          .pclr;
+          position: absolute;
+          li {
+            .w200;
+            height: 200px;
+            float: left;
+            margin-right: 2px;
+            margin-bottom: 2px;
+          }
+          li:hover {
+            & > .tips {
+              display: inline-block;
+            }
+          }
+      }
+  }
+  .jquery a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background: #fff url('/images/jquery.png') no-repeat;
+      background-size: 200px 200px;
+  }
+  .javascript a {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      background: #fff url('/images/javascript.png') no-repeat;
+      background-size: 200px 200px;
+  }
+  .tips {
+      .w200;
+      display: none;
+      height: 50px;
+      line-height: 50px;
+      text-align: center;
+      position: relative;
+      bottom: 52px;
+      color: #fff;
+      background-color: rgba(42, 42, 44, .8);
+  }
+  .nav {
+      position: fixed;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      .w150;
+      background-color: #51aded;
+      .header {
+          .w150;
+          height: 150px;
+          margin: 0 auto;
+          margin-bottom: 15px;
+          background: #51aded no-repeat url(/images/photo.png) left top;
+          -webkit-background-size: 150px 150px;
+          -moz-background-size: 150px 150px;
+          background-size: 150px 150px;
+          -webkit-border-radius: 75px;
+          border-radius: 75px;
+          -webkit-transition: -webkit-transform 2s ease-out;
+          -moz-transition: -moz-transform 2s ease-out;
+          -o-transition: -o-transform 2s ease-out;
+          -ms-transition: -ms-transform 2s ease-out;
+      }
+      .header:hover {
+          -webkit-transform: rotateZ(360deg);
+          -moz-transform: rotateZ(360deg);
+          -o-transform: rotateZ(360deg);
+          -ms-transform: rotateZ(360deg);
+          transform: rotateZ(360deg);
+      }
+      ul {
+        li {
+          .w150;
+          height: 25px;
+          text-align: center;
+          padding: 5px 0;
+          line-height: 25px;
+          a {
+            color: #fff;
+          }
+          &:hover {
+            background-color: rgb(50, 134, 205);
+            outline: none;
+            border: none;
+          }
+        }
+      }
+  }
+}
 
 
 

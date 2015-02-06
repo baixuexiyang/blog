@@ -1,3 +1,5 @@
+var ueditor = require('ueditor'),
+    path    = require('path');
 module.exports = function (app) {
 
     //@formatter:off
@@ -16,7 +18,7 @@ module.exports = function (app) {
         res.end();
     });
 
-    app.get('/blog/blog.html', function(req, res) {
+    app.get('/blog/essays.do', function(req, res) {
         res.render('blog/blog.html');
         res.end();
     });
@@ -26,9 +28,29 @@ module.exports = function (app) {
         res.end();
     });
 
+    app.get('/tools/index.html', function(req, res) {
+        res.render('tools/index.html');
+        res.end();
+    });
+
     // 博客路由
     app.get('/detail/:id', function(req, res) {
         res.render('blog/detail.html');
+        res.end();
+    });
+
+    app.get('/blog/article.do', function(req, res) {
+        res.render('blog/article.html');
+        res.end();
+    });
+
+    app.get('/blog/diary.do', function(req, res) {
+        res.render('blog/diary.html');
+        res.end();
+    });
+
+    app.get('/blog/news.do', function(req, res) {
+        res.render('blog/news.html');
         res.end();
     });
 
@@ -55,6 +77,5 @@ module.exports = function (app) {
         res.render('admin/edit.html');
         res.end();
     });
-
 
 };

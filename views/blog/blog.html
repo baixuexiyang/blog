@@ -1,4 +1,4 @@
-{{ include ../main/blog-head.html }}
+{{ include blog-head.html }}
 <input type="hidden" id="dispatcher" value="article-list">
 <div class="inbl article-list">
     <ul>
@@ -154,9 +154,11 @@
         </li>
     </ul>
     <div>
-        分页
+        {{ include ../main/pagination.html }}
     </div>
 </div>
-{{ include blog-left.html }}
+<div class="fr">
+    {{ include blog-left.html }}
+</div>
 {{ include ../main/include-foot.html }}
 

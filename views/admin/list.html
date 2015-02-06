@@ -1,8 +1,25 @@
-{{ include article-head.html }}
+{{ include admin-head.html }}
 <input type="hidden" id="dispatcher" value="admin-list">
 <style>
+.admin-left {
+    width: 300px;
+}
+.admin-right {
+    text-align: left;
+}
 </style>
 <div class="admin-list">
-    <a href="/edit/{{- id }}">点击</a>
+    {{ include admin-left.html }}
+    <div class="fl admin-right">
+        <ul>
+            <li>
+                <div>
+                    <a href="">这是文章标题</a>
+                    <div class="fr" style="margin-left: 100px;"><a href="/edit/{{- id }}">编辑</a><a href="">删除</a></div>
+                </div>
+            </li>
+            <li></li>
+        </ul>
+    </div>
 </div>
 {{ include ../main/include-foot.html }}

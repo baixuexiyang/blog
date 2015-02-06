@@ -1,8 +1,30 @@
-{{ include article-head.html }}
+{{ include admin-head.html }}
 <input type="hidden" id="dispatcher" value="admin-edit">
 <style>
+.admin-left {
+    width: 200px;
+}
+.admin-right {
+    text-align: left;
+}
 </style>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+
+
 <div class="admin-edit">
-    asdf
+    {{ include admin-left.html }}
+    <div class="fr admin-right" style="width:1000px;background-color: #ccc;">
+        <h5>标题</h5>
+        <input type="text">
+        <h5>内容</h5>
+        <div>
+            <script id="editor" type="text/plain" style="width:1000px;height:500px;"></script>
+        </div>
+    </div>
 </div>
+<script>
+    var ue = UE.getEditor('editor');
+</script>
 {{ include ../main/include-foot.html }}
