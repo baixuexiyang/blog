@@ -1,0 +1,22 @@
+* {font-family: "微软雅黑";}
+.fl {float:left;}
+.fr {float:right;}
+a {text-decoration: none;color: #000000;}
+.w230 {width: 230px;}
+.title {width: 600px;margin: 0 auto;margin-bottom: 50px;color: #5E5E5E; font-weight: normal;}
+.content {width: 1000px;margin: 0 auto;}
+.list {width: 30%;margin-left: 2%;float: left;padding-top: 2px;height: 520px;margin-top:20px;min-height: 500px;background: #fff !important;border-radius: 5px;}
+.w65{width: 65%;}
+.oper {clear:both; padding: 20px;margin-bottom: 20px;}
+.node-info{list-style: none;}
+.node-info li {margin-bottom: 20px;}
+.node-info li label {display: inline-block;width: 90px;text-align: right;}
+.node-info li textarea {width: 300px;height: 300px;}
+.node-info li:last-child label {vertical-align: top;}
+#json pre{border-radius: 5px;width: 100%;}
+.error-text {color: red;}
+.tips td:nth-child(odd){text-align:right;}
+.tips td:nth-child(even){text-align:left;}
+.node-info .form-control {display: inline;}
+#import {display: none;}
+#import textarea {width: 500px; height: 300px;}

@@ -1,0 +1,18 @@
+{
+    "banner": {
+        "name": "blog",
+        "author": "xiyangbaixue"
+    },
+    "path": {
+        "dest": {
+            "base": "..",
+            "public": "../public",
+            "views": "../views",
+            "less": "../public/less",
+            "css": "../public/css",
+            "data": "../mockup",
+            "js": "../public/js",
+            "finalCssFileName": "all"
+        }
+    }
+}

@@ -21,6 +21,7 @@ var express = require('express'),
     less = require('less-middleware'),
     debug = require('debug'),
     ejs = require('ejs'),
+    markdown = require('markdown-js'),
     config = require('./config/core'),
     main = require('./routes/main'),
     routes = require('./routes/routes'),
@@ -62,6 +63,14 @@ app.engine('.php', ejs.__express);
 app.engine('.html', ejs.__express);
 app.engine('.htm', ejs.__express);
 app.engine('.shtml', ejs.__express);
+
+app.engine('md', function(path, options, fn){
+  fs.readFile(path, 'utf8', function(err, str){
+    if (err) return fn(err);
+    str = markdown.parse(str).toString();
+    fn(null, str);
+  });
+});
 
 //设置favicon.ico
 app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -131,6 +140,10 @@ app.use("/ueditor/ue", ueditor(path.join(__dirname, 'public'), function(req, res
 
 
 
+app.get('/test', function(req, res) {
+    res.render('test.md');
+});
+
 // 主路由处理，包括首页、404、管理页
 main(app);
 
@@ -162,7 +175,7 @@ if (cluster.isMaster) {
 } else {
     server = http.createServer(app);
     io = socketio.listen(server);
-    require('./controllers/socket').initSocket(io);
+    // require('./controllers/socket').initSocket(io);
 
     server.listen(config.port, config.host, function () {
         //@formatter:off

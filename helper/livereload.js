@@ -1,8 +1,3 @@
-/**
- * 描述: 给页面添加livereload脚本
- * 作者: 李洪波
- * 时间：2013年12月
- */
 module.exports = function livereload(port) {
 
     var Util = {

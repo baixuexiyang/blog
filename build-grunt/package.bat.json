@@ -1,0 +1,36 @@
+{
+  "name": "blog",
+  "version": "0.0.1",
+  "private": true,
+  "description": "blog",
+  "main": "Gruntfile.js",
+  "scripts": {
+    "start": "grunt Gruntfile.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+      "grunt": "0.x.x",
+      "grunt-contrib-clean": "~0.5.0",
+      "grunt-contrib-copy": "~0.5.0",
+      "grunt-contrib-less": "~0.11.0",
+      "grunt-contrib-uglify": "~0.4.0",
+      "grunt-contrib-watch": "~0.6.1",
+      "grunt-contrib-concat": "^0.5.0",
+      "grunt-contrib-connect": "^0.8.0",
+      "grunt-zip": "^0.13.0",
+      "connect-livereload": "*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baixuexiyang/blog.git"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "xiyangbaixue",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/baixuexiyang/blog/issues"
+  },
+  "homepage": "https://github.com/baixuexiyang/blog"
+}

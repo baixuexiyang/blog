@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link href="/js/lib/kendo/styles/kendo.common.min.css" rel="stylesheet" type="text/css" />
+    <link href="/js/lib/kendo/styles/kendo.metro.min.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css" href="/js/lib/jsoneditor/jsoneditor.min.css">
+    <link href="/css/json.css" rel="stylesheet" />
+    <script type="text/javascript" src="/js/lib/jsoneditor/jsoneditor.min.js" charset="utf-8"></script>
+    <script src="/js/lib/jquery/src/jquery-1.10.1.min.js" charset="utf-8"></script>
+    <script src="/js/lib/kendo/js/kendo.web.min.js" charset="utf-8"></script>
+</head>
+<body>
+<div class="title"><h1>菜单生成</h1></div>
+<div class="content">
+    <div class="list" id="treeview">
+    </div>
+    <div class="list w65">
+        <form id="form-edit-node">
+            <ul class="node-info">
+                <li><label>Text：</label><input type="text" class="k-textbox w230" id="data-text"></li>
+                <li><label>Class：</label><input type="text" class="k-textbox w230" id="data-class"></li>
+                <li><label>Url：</label><input type="text" class="k-textbox w230" id="data-url"></li>
+                <li><label>DataProp：</label><textarea id="data-prop" class="k-textbox"></textarea></li>
+            </ul>
+        </form>
+        <span class="error-text"></span>
+    </div>
+    <div class="oper">
+        <div class="fl">
+            <input type="button" class="k-button" id="add-child" value="添加子节点">
+            <input type="button" class="k-button" id="add-sibling" value="添加兄弟节点">
+            <input type="button" class="k-button" id="del-node" value="删除节点">
+        </div>
+        <div class="fr">
+            <input type="button" class="k-button" id="insert" value="导入数据">
+            <input type="button" class="k-button" id="create" value="生成数据">
+            <input type="button" class="k-button" id="copy" value="复制数据">
+        </div>
+    </div>
+    <div id="json"></div>
+    <div id="import">
+        <p>请输入标准的JSON数据！</p>
+        <textarea class="k-textbox"></textarea>
+    </div>
+</div>
+<script src="/js/lib/formValidate/app.js" charset="utf-8"></script>
+<script src="/js/lib/zeroclipboard/jquery.zclip.min.js" charset="utf-8"></script>
+<script src="/js/lib/lodash/lodash.compat.js" charset="utf-8"></script>
+<script src="/js/app/script.js" charset="utf-8"></script>
+</body>
+</html>

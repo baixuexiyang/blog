@@ -68,12 +68,20 @@
         </li>
         <li>
             <div class="fl">#1楼 不知道 | 2015-01-31</div>
-            <div class="fr">引用</div>
+            <div class="fr">{{- title }}</div>
             <div class="content clr">
                 不知道不知道不知道不知道
             </div>
         </li>
     </ul>
+</div>
+<div class="info">
+    <h5>我要评论：</h5>
+    <form action="">
+        <label for="">尊姓大名：<input type="text"><span><em class="rmk">*</em>必填</span></label>
+        <label for="">电子邮件：<input type="text"><span><em class="rmk">*</em>必填，不公开</span></label>
+        <label for="">个人网站：<input type="text"><span><em class="brmk"></em>我信任你，不会填写广告链接</span></label>
+    </form>
 </div>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
@@ -88,6 +96,12 @@
         ],
         autoHeightEnabled: false,
         autoFloatEnabled: true,
-        maximumWords: 300
+        maximumWords: 300,
+        elementPathEnabled : false
     });
 </script>
+<div style="text-align:right;">
+    <span class="btn">提交</span>
+</div>
+
+

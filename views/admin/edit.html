@@ -1,13 +1,5 @@
 {{ include admin-head.html }}
 <input type="hidden" id="dispatcher" value="admin-edit">
-<style>
-.admin-left {
-    width: 200px;
-}
-.admin-right {
-    text-align: left;
-}
-</style>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
 <script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
@@ -15,12 +7,30 @@
 
 <div class="admin-edit">
     {{ include admin-left.html }}
-    <div class="fr admin-right" style="width:1000px;background-color: #ccc;">
+    <div class="fl admin-right">
+        <div class="title">新增随笔</div>
         <h5>标题</h5>
         <input type="text">
         <h5>内容</h5>
         <div>
             <script id="editor" type="text/plain" style="width:1000px;height:500px;"></script>
+        </div>
+        <div class="title">个人分类</div>
+        <div class="categary">
+            <ul>
+                <li><label for=""><input type="checkbox">css</label></li>
+                <li><label for=""><input type="checkbox">html</label></li>
+                <li><label for=""><input type="checkbox">javascript</label></li>
+            </ul>
+        </div>
+        <div class="title">高级选项</div>
+        <div class="advanced">
+            <ul>
+                <li><label for="">Tag标签:<input type="text" class="inp"></label></li>
+            </ul>
+            <span class="btn">发布</span>
+            <span class="btn">保存草稿</span>
+            <span class="btn">取消</span>
         </div>
     </div>
 </div>

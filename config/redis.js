@@ -5,7 +5,7 @@
  * @since 1.4.0(2014-04-27)
  */
 module.exports = {
-    host: '10.1.10.66',
-    port: 6379,
+    host: '127.0.0.1',
+    port: 3010,
     passwd: 'redis@tc'
 };

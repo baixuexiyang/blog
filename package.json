@@ -23,7 +23,9 @@
     "express-session": "^1.0.3",
     "moment": "^2.6.0",
     "mongodb": "~2.0",
-    "ueditor": "^1.0.0"
+    "ueditor": "^1.0.0",
+    "markdown-js": ">= 0.0.1",
+    "coffee-script": "~1.9.x"
   },
   "devDependencies": {},
   "repository": {

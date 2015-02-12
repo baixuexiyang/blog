@@ -1,8 +1,4 @@
-/**
- * 描述: 给页面添加livereload脚本
- * 作者: 李洪波
- * 时间：2014年5月
- */
+
 var child = require('child_process'),
     iconv = require('iconv-lite'),
     path = require('path');

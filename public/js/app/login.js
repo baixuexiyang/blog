@@ -74,7 +74,7 @@ define(function(require, exports, module) {
                 })
                 .done(function(res) {
                     if(res.success) {
-                        location.href = snow.apiUrl + '/list'
+                        location.href = snow.apiUrl + '/admin/list.do';
                     }
                 });
             });

@@ -1,25 +1,93 @@
 {{ include admin-head.html }}
 <input type="hidden" id="dispatcher" value="admin-list">
-<style>
-.admin-left {
-    width: 300px;
-}
-.admin-right {
-    text-align: left;
-}
-</style>
 <div class="admin-list">
     {{ include admin-left.html }}
     <div class="fl admin-right">
-        <ul>
-            <li>
-                <div>
-                    <a href="">这是文章标题</a>
-                    <div class="fr" style="margin-left: 100px;"><a href="/edit/{{- id }}">编辑</a><a href="">删除</a></div>
-                </div>
-            </li>
-            <li></li>
-        </ul>
+        <!-- <div class="categary">
+            <ul>
+                <li>
+                    <a href="">随笔</a>
+                </li>
+                <li>
+                    <a href="">文章</a>
+                </li>
+                <li>
+                    <a href="">日记</a>
+                </li>
+                <li>
+                    <a href="">新闻</a>
+                </li>
+            </ul>
+        </div> -->
+        <div class="title">文章列表</div>
+        <div class="article-list">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th width="35%">标题</th>
+                        <th width="15%">发布状态</th>
+                        <th width="15%">评论</th>
+                        <th width="15%">阅读</th>
+                        <th width="20%">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><a href="">这是文章标题</a></td>
+                        <td>未发布</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>
+                            <a href="/edit/{{- id }}">编辑</a>
+                            <a href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">这是文章标题</a></td>
+                        <td>未发布</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>
+                            <a href="/edit/{{- id }}">编辑</a>
+                            <a href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">这是文章标题</a></td>
+                        <td>未发布</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>
+                            <a href="/edit/{{- id }}">编辑</a>
+                            <a href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">这是文章标题</a></td>
+                        <td>未发布</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>
+                            <a href="/edit/{{- id }}">编辑</a>
+                            <a href="">删除</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><a href="">这是文章标题</a></td>
+                        <td>未发布</td>
+                        <td>100</td>
+                        <td>100</td>
+                        <td>
+                            <a href="/edit/{{- id }}">编辑</a>
+                            <a href="">删除</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            {{ include ../main/pagination.html }}
+        </div>
     </div>
 </div>
 {{ include ../main/include-foot.html }}

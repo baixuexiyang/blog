@@ -12,30 +12,54 @@ module.exports = function (app) {
         res.end();
     });
 
-    // 首页路由
-    app.get('/handlerbook.html', function(req, res) {
-        res.render('handlerbook.html');
-        res.end();
-    });
-
+    /**
+     * 首页路由
+     * @param {/blog/essays.do} 博客
+     * @param {/questions.do} 问答
+     * @param {/tools/index.do} 在线工具
+     * @param {/handlerbook.do} 手册
+     * @param {/plugin.do} jQuery插件
+     * @param {/games.do} 游戏
+     * @param {/infor.do} 关于我
+     */
     app.get('/blog/essays.do', function(req, res) {
         res.render('blog/blog.html');
         res.end();
     });
 
-    app.get('/infor.html', function(req, res) {
-        res.render('infor.html');
+    app.get('/questions.do', function(req, res) {
+        res.render('questions.html');
         res.end();
     });
 
-    app.get('/tools/index.html', function(req, res) {
+    app.get('/tools/index.do', function(req, res) {
         res.render('tools/index.html');
+        res.end();
+    });
+
+    app.get('/handlerbook.do', function(req, res) {
+        res.render('handlerbook.html');
+        res.end();
+    });
+
+    app.get('/plugin.do', function(req, res) {
+        res.render('plugin/index.html');
+        res.end();
+    });
+
+    app.get('/games.do', function(req, res) {
+        res.render('games/index.html');
+        res.end();
+    });
+
+    app.get('/infor.do', function(req, res) {
+        res.render('infor.html');
         res.end();
     });
 
     // 博客路由
     app.get('/detail/:id', function(req, res) {
-        res.render('blog/detail.html');
+        res.render('blog/detail.html', {title: 'zhangsan'});
         res.end();
     });
 
@@ -68,13 +92,29 @@ module.exports = function (app) {
         });
     });
 
-    app.get('/list', function(req, res) {
+    app.get('/admin/list.do', function(req, res) {
         res.render('admin/list.html',{id:123});
         res.end();
     });
 
     app.get('/edit/:id', function(req, res) {
         res.render('admin/edit.html');
+        res.end();
+    });
+
+    // 在线工具路由
+    app.get('/tools/json.do', function(req, res) {
+        res.render('json/index.html');
+        res.end();
+    });
+
+    app.get('/tools/json_download.do', function(req, res) {
+        res.render('json/download.html');
+        res.end();
+    });
+
+    app.get('/tools/json_upload.do', function(req, res) {
+        res.render('json/upload.html');
         res.end();
     });
 
