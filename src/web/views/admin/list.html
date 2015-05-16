@@ -1,0 +1,47 @@
+{{ include admin-head.html }}
+<input type="hidden" id="dispatcher" value="admin">
+<div class="admin-list">
+    {{ include admin-left.html }}
+    <div class="fl admin-right">
+        <div class="title">文章列表</div>
+        <div class="article-list">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th width="35%">标题</th>
+                        <th width="15%">发布状态</th>
+                        <th width="15%">评论</th>
+                        <th width="15%">阅读</th>
+                        <th width="20%">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ for(var i=0; i<articles.length; i++) {  }}
+                        <tr>
+                            <td><a href="/detail/{{- articles[i]._id }}">{{- articles[i].title }}</a></td>
+                            <td>
+                                {{ if (articles[i].status == 1) { }}
+                                发布
+                                {{ } }}
+                                {{ if (articles[i].status == 0) { }}
+                                未发布
+                                {{ } }}
+                            </td>
+                            <td>{{- articles[i].commit.length }}</td>
+                            <td>{{- articles[i].read }}</td>
+                            <td>
+                                <a href="/articles/edit/{{- articles[i]._id }}">编辑</a>
+                                <a href="javascript:;" data-id="{{- articles[i]._id }}" class="delete-article">删除</a>
+                            </td>
+                        </tr>
+                    {{ } }}
+
+                </tbody>
+            </table>
+        </div>
+        <div class="pagination">
+            {{ include ../main/pagination.html }}
+        </div>
+    </div>
+</div>
+{{ include ../main/include-foot.html }}

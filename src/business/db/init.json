@@ -1,0 +1,93 @@
+// 文章
+{
+    "id": 0,
+    "title": "文章标题",
+    "author": "xiyangbaixue",
+    "date": "2015-02-26",
+    "create": "原创",
+    "tags": "html、css、javascript",
+    "category": "javascript",
+    "content": "内容",
+    "status": "发布",
+    "attribute": "随笔",
+    "commit": 110,
+    "read": 100
+}
+
+// 评论
+{
+    "id": 0, // 文章ID
+    "commit": [{
+        "id": 0,
+        "name": "zhangsan",
+        "mail": "zhangsan@test.com",
+        "net": "zhangsan.com",
+        "content": "pinglun"
+    },{
+        "id":1,
+        "name": "lisi",
+        "mail": "lisi@test.com",
+        "net": "lisi.com",
+        "content": "pinglun"
+    }]
+}
+
+
+db.article.drop();
+db.createCollection("article");
+db.article.insert({
+    "title": "文章标题",
+    "author": "xiyangbaixue",
+    "date": "2015-02-26",
+    "create": "原创",
+    "tags": "html、css、javascript",
+    "category": "javascript",
+    "content": "内容",
+    "status": 1,
+    "attribute": "随笔",
+    "commit": [{
+        "name": "zhangsan",
+        "mail": "zhangsan@test.com",
+        "net": "zhangsan.com",
+        "content": "pinglun"
+    },{
+        "name": "lisi",
+        "mail": "lisi@test.com",
+        "net": "lisi.com",
+        "content": "pinglun"
+    }],
+    "read": 100
+});
+db.commit.drop();
+db.createCollection("commit");
+db.commit.insert({
+        "article_id": "",
+        "name": "zhangsan",
+        "data": "",
+        "mail": "zhangsan@test.com",
+        "net": "zhangsan.com",
+        "content": "pinglun"
+});
+db.category.drop();
+db.createCollection("category");
+db.category.insert({
+    "name": "javascript",
+    "description": ""
+});
+
+
+// 用户
+db.blogUser.drop();
+db.createCollection("blogUser");
+db.blogUser.insert({
+    "blogname": "xiyangbaixue",
+    "blogpassword": "blog123456"
+});
+
+
+
+
+
+
+
+

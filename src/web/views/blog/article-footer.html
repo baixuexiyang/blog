@@ -1,0 +1,69 @@
+<div class="footer">
+    <div>
+        文章信息
+    </div>
+    <ul>
+        <li>
+            标签：{{- article.tags }}
+        </li>
+        <li>
+            转载：<script>document.write(location.href);</script>
+        </li>
+        <li>
+            版权：本文版权归作者所有，如需转载请标明出处。
+        </li>
+    </ul>
+</div>
+<div>
+    <input type="hidden" vlaue="{{- prev }}">
+    {{ if (prev.title) { }}
+    <div>
+        上一篇：<a href="/detail/{{- prev._id }}">{{- prev.title }}</a>
+    </div>
+    {{ } }}
+    {{ if (next.title) { }}
+    <div>
+        下一篇：<a href="/detail/{{- next._id }}">{{- next.title }}</a>
+    </div>
+    {{ } }}
+</div>
+<div class="fr">
+    posted @{{- article.author }} {{- article.date }} 阅读({{- article.read }}) 评论({{- commit.length }})
+</div>
+<div class="comment">
+    <h5>评论:</h5>
+    {{ if(!commit.length) { }}
+        <div class="empty-commit">暂无评论</div>
+    {{ } }}
+    <ul>
+        {{ for(var i=0; i<commit.length; i++) {  }}
+        <li>
+            <div class="fl">#{{- i+1 }}楼 <a href="javascript:;" data-id="{{- commit[i]._id }}">{{- commit[i].name }}</a> | {{- commit[i].date }}</div>
+            <div class="fr">引用</div>
+            <div class="content clr">
+                {{- commit[i].content }}
+            </div>
+        </li>
+        {{ } }}
+    </ul>
+</div>
+<div class="info">
+    <h5>我要评论：</h5>
+    <form action="" id="form-commit-info">
+        <label for="">尊姓大名：<input type="text" id="name" name="name"><span><em class="rmk">*</em>必填</span></label>
+        <label for="">电子邮件：<input type="text" id="email" name="email"><span><em class="rmk">*</em>必填，不公开</span></label>
+        <label for="">个人网站：<input type="text" id="site" name="site"><span><em class="brmk"></em>我信任你，不会填写广告链接</span></label>
+        <input type="hidden" name="article_id" value="{{- article._id }}">
+    </form>
+</div>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+<div class="commit">
+    <script id="editor" type="text/plain"></script>
+</div>
+<div class="btn-area">
+    <span class="btn" id="submit-comment" data-action="/mockup/json/common.json">提交</span>
+</div>
+
+

@@ -1,0 +1,60 @@
+<div class="time">
+    <script src="/js/lib/time/honehone_clock_tr.js"></script>
+</div>
+<div class="search">
+    <h3>搜索</h3>
+    <label for="" class="blk"><input type="text"><span class="btn w80">找找看</span></label>
+    <!-- <label for="" class="blk"><input type="text"><span class="btn w80">谷歌搜索</span></label> -->
+</div>
+<div>
+    <h3>常用链接</h3>
+    <ul>
+        <li>
+            <a target="_blank" href="http://ued.taobao.com/blog/" title="淘宝UED">淘宝UED</a>
+        </li>
+        <li>
+            <a target="_blank" href="http://ued.sina.com/" title="新浪UED">新浪UED</a>
+        </li>
+        <li>
+            <a target="_blank" href="http://ued.baidu.com/" title="百度UED">百度UED</a>
+        </li>
+        <li>
+            <a target="_blank" href="http://ued.ctrip.com/" title="携程UED">携程UED</a>
+        </li>
+        <li>
+            <a target="_blank" href="http://uedc.163.com/" title="网易UED">网易UED</a>
+        </li>
+        <li>
+            <a target="_blank" href="http://cdc.tencent.com/" title="腾讯CDC">腾讯CDC</a>
+        </li>
+        <li>
+            <a target="_blank" href="http://www.uisdc.com/" title="优秀网页设计">优秀网页设计</a>
+        </li>
+    </ul>
+</div>
+<div>
+    <h3>随笔分类</h3>
+    <ul>
+        {{ for(var i=0; i<categorys.length; i++) {  }}
+            <li><a href="/blog/category/{{- categorys[i]._id }}">{{- categorys[i].name }}</a></li>
+        {{ } }}
+        <!-- <li><a href="">html</a></li>
+        <li><a href="">css</a></li>
+        <li><a href="">javascript</a></li>
+        <li><a href="">不知道</a></li>
+        <li><a href="">不知道</a></li> -->
+    </ul>
+</div>
+<div>
+    <h3>阅读排行版</h3>
+    <ul>
+        {{ for(var i=0; i<read.length; i++) {  }}
+            <li>{{- i+1 }}. <a href="/detail/{{- read[i]._id }}">{{- read[i].title }}</a>({{- read[i].read }})</li>
+        {{ } }}
+        <!-- <li>1. <a href="">阅读排行榜</a>(10000)</li>
+        <li>2. <a href="">阅读排行榜</a>(6000)</li>
+        <li>3. <a href="">阅读排行榜</a>(6000)</li>
+        <li>4. <a href="">阅读排行榜</a>(6000)</li>
+        <li>5. <a href="">阅读排行榜</a>(6000)</li> -->
+    </ul>
+</div>

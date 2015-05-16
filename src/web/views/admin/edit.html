@@ -1,0 +1,67 @@
+{{ include admin-head.html }}
+<input type="hidden" id="dispatcher" value="admin">
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" charset="utf-8" src="/ueditor/lang/zh-cn/zh-cn.js"> </script>
+<input type="hidden" id="_id" value="{{- _id }}">
+<input type="hidden" id="model" value="edit">
+<input type="hidden" id="read" value="0">
+<div class="admin-edit">
+    {{ include admin-left.html }}
+    <div class="fl admin-right">
+        <form action="" id="form-edit-article">
+            <div class="title">编辑随笔</div>
+            <h5>标题</h5>
+            <input type="text" id="title"><em class="rmk">*</em>
+            <h5>内容</h5>
+            <div>
+                <script id="editor" type="text/plain" style="width:1000px;height:500px;"></script>
+            </div>
+            <div class="title">个人分类</div>
+            <div class="category">
+                <ul>
+                    {{ for(var i=0; i<categorys.length; i++) {  }}
+                        <li><label for=""><input type="checkbox" value="{{- categorys[i]._id }}">{{- categorys[i].name }}</label></li>
+                    {{ } }}
+                </ul>
+            </div>
+            <div class="title">文档属性</div>
+            <div class="create">
+                <ul>
+                    <li><label for=""><input type="radio" name="create" value="original">原创</label></li>
+                    <li><label for=""><input type="radio" name="create" value="reprinted">转载</label></li>
+                    <li><label for=""><input type="radio" name="create" value="translation">翻译</label></li>
+                </ul>
+            </div>
+            <div class="title">属性</div>
+            <div class="attribute">
+                <ul>
+                    <li><label for=""><input type="radio" name="attribute" value="essays">随笔</label></li>
+                    <li><label for=""><input type="radio" name="attribute" value="article">文章</label></li>
+                    <li><label for=""><input type="radio" name="attribute" value="diary">日记</label></li>
+                    <li><label for=""><input type="radio" name="attribute" value="news">新闻</label></li>
+                </ul>
+            </div>
+            <div class="title">高级选项</div>
+            <div class="advanced">
+                <ul>
+                    <li><label for="" class="form_label">作者:<em class="rmk">*</em></label><input type="text" class="inp" id="author"></li>
+                    <li><label for="" class="form_label">Tag标签:<em class="brmk"></em></label><input type="text" class="inp" id="tags">(多个标签以','分隔)</li>
+                </ul>
+                <input type="hidden" value="{{- article.status}}">
+                {{ if (article.status == 0) { }}
+                    <span class="btn" id="edit-publish" data-value="1">保存发布</span>
+                    <span class="btn" id="edit-draft" data-value="0">保存草稿</span>
+                    <a href="/admin/list.do"><span class="btn">取消</span></a>
+                {{ } else { }}
+                    <span class="btn" id="edit-save" data-value="1">保存修改</span>
+                    <a href="/admin/list.do"><span class="btn">取消</span></a>
+                {{ } }}
+            </div>
+        </form>
+    </div>
+</div>
+<script>
+    window.ue = UE.getEditor('editor');
+</script>
+{{ include ../main/include-foot.html }}

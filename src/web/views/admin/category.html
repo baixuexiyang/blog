@@ -1,0 +1,46 @@
+{{ include admin-head.html }}
+<input type="hidden" id="dispatcher" value="admin">
+<div class="admin-list">
+    {{ include admin-left.html }}
+    <div class="fl admin-right">
+        <div class="title">Edit Categorys</div>
+        <div class="">
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th width="35%">category</th>
+                        <th width="25%">description</th>
+                        <th width="15%"></th>
+                        <th width="15%"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{ for(var i=0; i<categorys.length; i++) {  }}
+                        <tr data-id="{{- categorys[i]._id }}" data-attribute='{{- JSON.stringify(categorys[i]) }}'>
+                            <td>{{- categorys[i].name }}</td>
+                            <td>{{- categorys[i].description }}</td>
+                            <td><span class="category-edit">编辑</span></td>
+                            <td><span class="category-delete">删除</span></td>
+                        </tr>
+                    {{ } }}
+                </tbody>
+            </table>
+        </div>
+        <div class="title">Add New Category</div>
+        <div>
+            <form action="" id="form-add-category">
+                <div>Title</div>
+                <input type="text" name="title" id="title">
+                <div>Description</div>
+                <textarea name="description" id="description" cols="30" rows="5"></textarea>
+                <p>
+                    <span class="btn" id="add-category">Add</span>
+                </p>
+            </form>
+        </div>
+    </div>
+</div>
+<script type="text/html" id="template">
+
+</script>
+{{ include ../main/include-foot.html }}

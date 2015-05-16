@@ -1,0 +1,20 @@
+{{ include blog-head.html }}
+<script src="/ueditor/third-party/SyntaxHighlighter/shCore.js"></script>
+<link rel="stylesheet" href="/ueditor/third-party/SyntaxHighlighter/shCoreDefault.css" />
+<input type="hidden" id="dispatcher" value="article-detail">
+<div class="article-detail">
+    <h2>{{- article.title }}</h2>
+    <div class="sub-title">作者:<a href="">{{- article.author }}</a> 日期:<a>{{- article.date }}</a><img src="/images/ico_{{- article.create }}.gif"></div>
+    <div class="content">
+        {{- article.content }}
+    </div>
+    <div class="article-footer">
+        {{ include article-footer.html }}
+    </div>
+    <div class="scrollup"></div>
+</div>
+<script>
+    SyntaxHighlighter.all();
+</script>
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"16"},"slide":{"type":"slide","bdImg":"2","bdPos":"right","bdTop":"164.5"},"image":{"viewList":["qzone","tsina","tqq","renren","weixin"],"viewText":"分享到：","viewSize":"16"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["qzone","tsina","tqq","renren","weixin"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
+{{ include ../main/include-foot.html }}

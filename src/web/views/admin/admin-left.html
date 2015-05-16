@@ -1,0 +1,22 @@
+<div class="fl admin-left">
+    <div class="operation">
+        <h3>操作</h3>
+        <ul>
+            <li>
+                <a href="/essay/add.html">添加新随笔</a>
+            </li>
+            <li>
+                <a href="/admin/list.do">随笔列表</a>
+            </li>
+        </ul>
+    </div>
+    <div class="categary">
+        <h3>分类</h3>
+        <ul>
+            <li><a href="/category.do">[编辑分类]</a></li>
+            {{ for(var i=0; i<categorys.length; i++) {  }}
+                <li><a href="/category/{{- categorys[i]._id }}">{{- categorys[i].name }}</a></li>
+            {{ } }}
+        </ul>
+    </div>
+</div>

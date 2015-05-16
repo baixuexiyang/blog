@@ -1,0 +1,65 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>夕阳白雪</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <link rel="stylesheet" type="text/css" href="/css/all.min.css" />
+  <!-- modernizr enables HTML5 elements and feature detects -->
+  <script type="text/javascript" src="js/lib/modernizr/modernizr-1.5.min.js"></script>
+</head>
+
+<body id="homepage">
+  <header>
+    <div id="logo"><h1>夕阳<a href="/infor.do">XIYANGBAIXUE</a>白雪</h1></div>
+    <nav>
+      <ul class="lavaLampWithImage" id="lava_menu">
+        <li class="current"><a href="/">首 页</a></li>
+        <li><a href="/blog/blog.do">博 客</a></li>
+        <li><a href="/questions.do">问 答</a></li>
+        <!-- <li><a href="/webapp.do">webapp</a></li> -->
+        <li><a href="/tools/index.do">在线工具</a></li>
+        <li><a href="/handlerbook.do">手册</a></li>
+        <li><a href="/plugin.do">素材</a></li>
+        <li><a href="/games.do">游戏</a></li>
+        <li><a href="/infor.do">关于我</a></li>
+        <li><a href="/english.do">ENGLISH</a></li>
+      </ul>
+    </nav>
+  </header>
+  <div id="main">
+    <div id="site_content">
+      <div id="sidebar_container">
+        <div class="gallery">
+          <ul class="images">
+            <li class="show"><img width="950" height="450" src="images/a.jpg" alt="photo_one" /></li>
+            <li><img width="950" height="450" src="images/b.jpg" alt="photo_two" /></li>
+            <li><img width="950" height="450" src="images/c.jpg" alt="photo_three" /></li>
+            <li><img width="950" height="450" src="images/d.jpg" alt="photo_four" /></li>
+            <li><img width="950" height="450" src="images/e.jpg" alt="photo_five" /></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>Copyright &copy; 2015 夕阳白雪 , All Rights Reserved. &nbsp;</p>
+      <p>邮箱：<a href="mailto:ganzwen@gmail.com">ganzwen@gmail.com</a>  Designed By：<a href="/infor.do  ">xiyangbaixue</a> </p>
+    </footer>
+  </div>
+  <!-- javascript at the bottom for fast page loading -->
+  <script type="text/javascript" src="js/lib/jquery/src/jquery.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery/plugin/jquery.easing.min.js"></script>
+  <script type="text/javascript" src="js/lib/jquery/plugin/jquery.lavalamp.min.js"></script>
+  <script type="text/javascript" src="js/lib/modernizr/image_fade.js"></script>
+  <script type="text/javascript">
+    $(function() {
+      $("#lava_menu").lavaLamp({
+        fx: "backout",
+        speed: 700
+      });
+    });
+  </script>
+</body>
+</html>

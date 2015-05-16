@@ -1,0 +1,32 @@
+total<span class="total">{{- size }}</span>:
+{{ if(size > 1) { }}
+    <span><a href="{{- dest+1 }}">First</a></span>
+    <span><a href="{{- dest+(current == 1 ? 1 : current-1) }}">Prev</a></span>
+{{ } }}
+<div class="inbl">
+    {{ if(size<5) { }}
+        {{ for(var i = 1; i<size+1; i++) { }}
+            <a href="{{- dest+i }}" {{ if(i == current) { }}class="active" {{ } }}>{{- i }}</a>
+        {{ } }}
+    {{ } }}
+    {{ if(size>=5 && current < (size-3) ) { }}
+        <a href="{{- dest+current }}" class="active">{{- current }}</a>
+        <a href="{{- dest+(current+1) }}">{{- current+1 }}</a>
+        <i>......</i>
+        <a href="{{- dest+(size-1) }}">{{- size-1 }}</a>
+        <a href="{{- dest+size }}">{{- size }}</a>
+    {{ } }}
+    {{ if(size>=5 && current >= (size-3) ) { }}
+        {{ for(var i = size-3; i<size+1; i++) { }}
+            <a href="{{- dest+i }}" {{ if(i == current) { }}class="active" {{ } }}>{{- i }}</a>
+        {{ } }}
+    {{ } }}
+</div>
+{{ if(size > 1) { }}
+    <span>
+        <a href="{{- dest+(current == size ? current : current+1) }}">Next</a>
+    </span>
+    <span>
+        <a href="{{- dest+size }}">Last</a>
+    </span>
+{{ } }}
